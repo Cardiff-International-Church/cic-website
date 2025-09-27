@@ -1,0 +1,27 @@
+header {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 6;
+}
+
+div .hero {
+  grid-row: 3 / span 4;
+  grid-column: 1 / span 6;
+}
+
+.hero img {
+  max-height: 40rem;
+}
+
+content {
+  grid-row: 3 / span 4;
+  grid-column: 1 / span 6;
+}
+
+content img {
+  max-height: 20rem;
+}
+
+nav {
+  grid-row: 7 / span 1;
+  grid-column: 1 / span 6;
+}
