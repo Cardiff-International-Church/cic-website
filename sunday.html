@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday Service | Cardiff International Church | a channel of God's love & blessing to all nations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cicGold: '#b8860b',
+                        cicNavy: '#0f172a'
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+                        heading: ['"Playfair Display"', 'Georgia', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        /* Ensure dropdown menus work properly */
+        .nav-menu .group:hover .sub-menu,
+        .nav-menu .group:focus-within .sub-menu {
+            display: flex !important;
+        }
+        
+        /* Mobile dropdown styles */
+        @media (max-width: 768px) {
+            .nav-menu li.active .sub-menu {
+                display: flex !important;
+            }
+        }
+        
+        /* Ensure proper z-index layering */
+        .nav-menu .sub-menu {
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased">
+    <header class="site-header max-w-7xl mx-auto bg-white shadow-2xl rounded-b-lg overflow-hidden">
+        <div class="header-bar px-6 py-8 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div class="branding space-y-2 text-left">
+                <h1 class="site-title text-3xl md:text-4xl font-bold text-cicGold">
+                    <a href="index.html" class="hover:text-amber-500 transition-colors">Cardiff International Church</a>
+                </h1>
+                <p class="site-tagline text-base md:text-lg italic text-slate-600">a channel of God's love & blessing to all nations</p>
+            </div>
+            <form class="search-container flex w-full max-w-xs gap-3 items-center md:justify-end" role="search">
+                <label for="search" class="sr-only">Search</label>
+                <input type="search" id="search" placeholder="Search..." aria-label="Search" class="w-full rounded-full border border-slate-300/70 bg-white px-4 py-2 text-sm focus:border-cicGold focus:outline-none focus:ring-2 focus:ring-cicGold/40">
+                <button type="submit" aria-label="Search" class="grid h-11 w-11 place-items-center rounded-full bg-cicNavy text-white text-lg shadow-md transition hover:bg-slate-800">🔍</button>
+            </form>
+        </div>
+        <div class="header-image bg-black">
+            <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2019/07/cropped-20190714_162207.jpg" alt="Cardiff International Church outdoor gathering" class="h-[400px] md:h-[630px] w-full object-cover">
+        </div>
+    </header>
+
+    <nav class="main-navigation max-w-7xl mx-auto bg-slate-700 text-white shadow-xl rounded-b-lg mb-12" role="navigation">
+        <div class="px-4 md:px-6">
+            <div class="flex items-center justify-between py-3 md:hidden">
+                <span class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">Menu</span>
+                <button class="menu-toggle inline-flex items-center justify-center rounded-md px-3 py-2 text-2xl hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-700 focus:ring-amber-400" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            </div>
+            <ul id="primary-navigation" class="nav-menu hidden flex-col divide-y divide-slate-600 text-xs font-semibold uppercase md:flex md:flex-row md:flex-nowrap md:items-center md:gap-0 md:divide-y-0 md:text-sm md:whitespace-nowrap">
+                <li><a href="index.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Home</a></li>
+                <li><a href="purpose-of-life.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Purpose of Life</a></li>
+                <li class="relative group">
+                    <a href="whats-on.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>What's On</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="sunday.html" class="block rounded-md px-3 py-2 text-sm text-amber-300 hover:bg-slate-500">Sunday</a></li>
+                        <li><a href="small-group-fellowship.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Small Group Fellowship</a></li>
+                        <li><a href="revival-worship-night.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Revival Worship Night</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                    <a href="free-classes.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>Free Classes</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="free-international-cafe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free International Cafe</a></li>
+                        <li><a href="free-english-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free English Class</a></li>
+                        <li><a href="free-korean-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free Korean Class</a></li>
+                    </ul>
+                </li>
+                <li><a href="mission.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Mission</a></li>
+                <li><a href="special-events.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Special Events</a></li>
+                <li class="relative group">
+                    <a href="photos.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>Photo News</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="photos-2008-2010.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2008-2010</a></li>
+                        <li><a href="photos-2011-2015.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2011-2015</a></li>
+                        <li><a href="photos-2016-2020.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2016-2020</a></li>
+                        <li><a href="photos-2021-2025.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2021-2025</a></li>
+                    </ul>
+                </li>
+                <li><a href="safeguarding.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Safeguarding</a></li>
+                <li class="relative group">
+                    <a href="about.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>About Us</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="pastor.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Pastor</a></li>
+                        <li><a href="leadership-team.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Leadership Team</a></li>
+                        <li><a href="nationalities.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Nationalities at CIC</a></li>
+                        <li><a href="what-we-believe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">What We Believe</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="px-4 pb-16">
+        <div class="mx-auto flex max-w-7xl flex-col gap-12">
+            <section id="sunday-content" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-white p-12 shadow-2xl md:p-16">
+                <div class="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-transparent"></div>
+                <div class="relative space-y-16">
+                    <!-- Page Header -->
+                    <div class="text-center space-y-6">
+                        <div class="inline-flex items-center rounded-full bg-amber-500/10 px-4 py-2">
+                            <span class="text-xs font-semibold uppercase tracking-[0.4em] text-amber-600 md:text-sm">Sunday Service</span>
+                        </div>
+                        <h1 class="font-heading text-4xl text-slate-900 md:text-5xl lg:text-6xl">Join Us Every Sunday</h1>
+                        <p class="mx-auto max-w-3xl text-lg leading-8 text-slate-600 md:text-xl">Experience worship, fellowship, and community in our international family</p>
+                    </div>
+
+                    <!-- Service Schedule with Photos -->
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <h2 class="font-heading text-3xl text-slate-900 md:text-4xl">Sunday Service: 11:00 AM</h2>
+                        </div>
+                        
+                        <!-- Photo Gallery -->
+                        <div class="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto">
+                            <figure class="group overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10">
+                                <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2021/07/CIC-Sunday-Service-edited-1536x900.jpg" alt="International community gathering" class="h-48 md:h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+                            </figure>
+                            <figure class="group overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10">
+                                <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2024/05/cropped-worship-1-scaled-1.jpg" alt="Multicultural worship" class="h-48 md:h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+                            </figure>
+                        </div>
+                        
+                        <!-- Service Details Cards -->
+                        <div class="grid gap-4 md:grid-cols-3">
+                            <!-- Livestream Card -->
+                            <div class="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300">
+                                <div class="space-y-3">
+                                    <h3 class="font-heading text-lg font-semibold text-slate-900">Join our livestream</h3>
+                                    <p class="text-sm text-slate-600">Just search 'Cardiff International Church' on YouTube.</p>
+                                </div>
+                            </div>
+
+                            <!-- Fellowship Card -->
+                            <div class="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300">
+                                <div class="space-y-3">
+                                    <h3 class="font-heading text-lg font-semibold text-slate-900">Lunch & Fellowship</h3>
+                                    <p class="text-sm text-slate-600">Join us for a meal after the service!</p>
+                                </div>
+                            </div>
+
+                            <!-- Kids Club Card -->
+                            <div class="group relative overflow-hidden rounded-2xl bg-white border border-slate-200 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300">
+                                <div class="space-y-3">
+                                    <h3 class="font-heading text-lg font-semibold text-slate-900">Kids Club</h3>
+                                    <p class="text-sm text-slate-600">Special activities for children during service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Description -->
+                    <div class="grid gap-8 md:grid-cols-3">
+                        <article class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 p-6 shadow-lg ring-1 ring-amber-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">🎵</span>
+                                    <h3 class="font-heading text-lg font-semibold text-slate-900">Praise & Worship</h3>
+                                </div>
+                                <p class="text-slate-700">We begin our Sunday service with songs of praise, acknowledging God's greatness and preparing our hearts for His Word.</p>
+                            </div>
+                        </article>
+
+                        <article class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 p-6 shadow-lg ring-1 ring-blue-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">📖</span>
+                                    <h3 class="font-heading text-lg font-semibold text-slate-900">God's Word</h3>
+                                </div>
+                                <p class="text-slate-700">We then move into a time of listening to the Word of God, where the message shared speaks to the needs of the church and resonates with individuals in their personal circumstances, offering guidance, encouragement, and strength.</p>
+                            </div>
+                        </article>
+
+                        <article class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-50 via-emerald-50 to-green-100 p-6 shadow-lg ring-1 ring-green-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-2xl">🍽️</span>
+                                    <h3 class="font-heading text-lg font-semibold text-slate-900">Fellowship Lunch</h3>
+                                </div>
+                                <p class="text-slate-700">Recognising the value of a loving fellowship in the church community, we stay together for lunch after the service, where we can continue to connect, encourage one another, and grow together as a family in the love of Christ.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Special Elements -->
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <h2 class="font-heading text-3xl text-slate-900 md:text-4xl">Special Elements</h2>
+                            <p class="mt-4 text-lg text-slate-600">What makes our Sunday services unique</p>
+                        </div>
+                        
+                        <div class="grid gap-6 md:grid-cols-3">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">🍞</span>
+                                        <h3 class="font-heading text-lg font-semibold text-slate-900">Holy Communion</h3>
+                                    </div>
+                                    <p class="text-slate-600">
+                                        On the third Sunday of each month, we celebrate communion with bread and the cup, inviting all ‘born again’ Christians (John 3:3-15) to partake in this sacred act. 
+                                        We do so in remembrance of Jesus Christ, who suffered and died on the cross, paying the price for all our sins as the eternal sacrifice offered once for all (Hebrews 10:10).
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">🎤</span>
+                                        <h3 class="font-heading text-lg font-semibold text-slate-900">Guest Speakers</h3>
+                                    </div>
+                                    <p class="text-slate-600">
+                                        Occasionally, we welcome guest speakers to share a message with us, and we also have a time for personal testimonies, inspiring stories of faith. 
+                                        Our services may also feature special presentations and songs sung in various languages, reflecting the beauty of different cultures in worship.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">🌍</span>
+                                        <h3 class="font-heading text-lg font-semibold text-slate-900">Multicultural Worship</h3>
+                                    </div>
+                                    <p class="text-slate-600">Our services feature presentations and songs in various languages, reflecting the beauty of different cultures in worship.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Photos -->
+                    <div class="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto">
+                        <figure class="group overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10">
+                            <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2022/05/Word-by-Ps-Roy-1-500x281.jpg" alt="International community gathering" class="h-48 md:h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+                        </figure>
+                        <figure class="group overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10">
+                            <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2024/04/cropped-worship-scaled-1-500x243.jpg" alt="Multicultural worship" class="h-48 md:h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+                        </figure>
+                    </div>
+
+                    <!-- Unity in Diversity -->
+                    <div class="space-y-8">
+                        <div class="text-center">
+                            <h2 class="font-heading text-3xl text-slate-900 md:text-4xl">Unity in Diversity</h2>
+                            <p class="mt-4 text-lg text-slate-600">Our Sunday service may vary from week to week, as we embrace the diversity of our transient international congregation.</p>
+                        </div>
+                        
+                        <div class="space-y-8">
+                            <!-- Content Section -->
+                            <div class="mx-auto max-w-4xl text-center space-y-6">
+                                <p class="text-lg text-slate-600">With members from different church traditions and cultural backgrounds, the style of worship, expressions of praise, and flow of service can look different, reflecting the rich variety of God's family.</p>
+                                
+                                <p class="text-slate-600">It has been a true blessing for us to experience unity in diversity, coming together as one big family in the love of God.</p>
+                            </div>
+                            
+                            <!-- Scripture Quote -->
+                            <div class="mx-auto max-w-4xl">
+                                <blockquote class="rounded-2xl border-l-4 border-cicGold bg-gradient-to-r from-amber-50 to-orange-50 p-8 text-center shadow-sm">
+                                    <p class="text-xl font-medium italic text-slate-800 mb-3">"Just as a body, though one, has many parts, but all its many parts form one body, so it is with Christ."</p>
+                                    <cite class="text-lg font-semibold text-cicGold">1 Corinthians 12:12</cite>
+                                </blockquote>
+                            </div>
+                            
+                            <!-- Bottom Photos -->
+                            <div class="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto">
+                                <figure class="group overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10">
+                                    <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2023/07/cropped-20230716_123627-scaled-1-500x243.jpg" alt="International community gathering" class="h-48 md:h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+                                </figure>
+                                <figure class="group overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10">
+                                    <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2023/08/cropped-20230819_120407-scaled-1-500x243.jpg" alt="Multicultural worship" class="h-48 md:h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center space-y-8">
+                        <div>
+                            <h2 class="font-heading text-4xl text-slate-900 md:text-5xl mb-4">Join Us This Sunday</h2>
+                            <p class="mx-auto max-w-3xl text-lg leading-8 text-slate-600 md:text-xl">Whether you're new to Cardiff or have been here for years, whether you're exploring faith or have walked with God for decades, you have a place with us.</p>
+                        </div>
+                        
+                        <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-cicGold px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-amber-600 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-cicGold focus:ring-offset-2">
+                                Get Directions
+                            </a>
+                            <a href="about.html" class="inline-flex items-center justify-center rounded-full border-2 border-cicGold bg-transparent px-8 py-4 text-base font-semibold text-cicGold transition hover:bg-cicGold hover:text-white focus:outline-none focus:ring-2 focus:ring-cicGold focus:ring-offset-2">
+                                Learn More About Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer bg-slate-700 text-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Contact Information -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-white">Contact Us</h3>
+                    <div class="space-y-2 text-sm">
+                        <p class="flex items-center gap-2">
+                            <span>📍</span>
+                            <span>Cardiff, Wales, UK</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <span>📧</span>
+                            <a href="mailto:info@cardiffinternationalchurch.org" class="hover:text-amber-300 transition-colors">info@cardiffinternationalchurch.org</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <span>📞</span>
+                            <span>Contact us for details</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-white">Quick Links</h3>
+                    <nav class="space-y-2 text-sm">
+                        <a href="index.html" class="block hover:text-amber-300 transition-colors">Home</a>
+                        <a href="whats-on.html" class="block hover:text-amber-300 transition-colors">What's On</a>
+                        <a href="about.html" class="block hover:text-amber-300 transition-colors">About Us</a>
+                        <a href="contact.html" class="block hover:text-amber-300 transition-colors">Contact</a>
+                    </nav>
+                </div>
+
+                <!-- Gatherings -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-white">Our Gatherings</h3>
+                    <nav class="space-y-2 text-sm">
+                        <a href="sunday.html" class="block hover:text-amber-300 transition-colors">Sunday Service</a>
+                        <a href="small-group-fellowship.html" class="block hover:text-amber-300 transition-colors">Small Group Fellowship</a>
+                        <a href="revival-worship-night.html" class="block hover:text-amber-300 transition-colors">Revival Worship Night</a>
+                        <a href="free-classes.html" class="block hover:text-amber-300 transition-colors">Free Classes</a>
+                    </nav>
+                </div>
+
+                <!-- Connect -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-white">Connect With Us</h3>
+                    <div class="space-y-2 text-sm">
+                        <p>Join our international community and experience God's love in the heart of Cardiff.</p>
+                        <div class="flex gap-4 pt-2">
+                            <a href="#" class="text-slate-300 hover:text-amber-300 transition-colors" aria-label="Facebook">📘</a>
+                            <a href="#" class="text-slate-300 hover:text-amber-300 transition-colors" aria-label="Instagram">📷</a>
+                            <a href="#" class="text-slate-300 hover:text-amber-300 transition-colors" aria-label="YouTube">📺</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partnership Information -->
+            <div class="mt-8 pt-8 border-t border-slate-600 text-center">
+                <p class="text-sm text-slate-400">In partnership with <span class="font-medium text-slate-300">NIC (Newport International Church)</span></p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-6 pt-6 border-t border-slate-600 text-center">
+                <p class="text-sm text-slate-400">&copy; 2025 Cardiff International Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
