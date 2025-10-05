@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Cardiff International Church | a channel of God's love & blessing to all
+      nations
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cicGold: "#b8860b",
+              cicNavy: "#0f172a",
+            },
+            fontFamily: {
+              sans: [
+                '"Inter"',
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                '"Segoe UI"',
+                "sans-serif",
+              ],
+              heading: ['"Playfair Display"', "Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Ensure dropdown menus work properly */
+      .nav-menu .group:hover .sub-menu,
+      .nav-menu .group:focus-within .sub-menu {
+        display: flex !important;
+      }
+
+      /* Mobile dropdown styles */
+      @media (max-width: 768px) {
+        .nav-menu li.active .sub-menu {
+          display: flex !important;
+        }
+      }
+
+      /* Ensure proper z-index layering */
+      .nav-menu .sub-menu {
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-100 text-slate-800 font-sans antialiased">
+    <header
+      class="site-header max-w-7xl mx-auto bg-white shadow-2xl rounded-b-lg overflow-hidden"
+    >
+      <div
+        class="header-bar px-6 py-8 flex flex-col gap-6 md:flex-row md:items-start md:justify-between"
+      >
+        <div class="branding space-y-2 text-left">
+          <h1 class="site-title text-3xl md:text-4xl font-bold text-cicGold">
+            <a href="index.html" class="hover:text-amber-500 transition-colors"
+              >Cardiff International Church</a
+            >
+          </h1>
+          <p class="site-tagline text-base md:text-lg italic text-slate-600">
+            a channel of God's love & blessing to all nations
+          </p>
+        </div>
+        <form
+          class="search-container flex w-full max-w-xs gap-3 items-center md:justify-end"
+          role="search"
+        >
+          <label for="search" class="sr-only">Search</label>
+          <input
+            type="search"
+            id="search"
+            placeholder="Search..."
+            aria-label="Search"
+            class="w-full rounded-full border border-slate-300/70 bg-white px-4 py-2 text-sm focus:border-cicGold focus:outline-none focus:ring-2 focus:ring-cicGold/40"
+          />
+          <button
+            type="submit"
+            aria-label="Search"
+            class="grid h-11 w-11 place-items-center rounded-full bg-cicNavy text-white text-lg shadow-md transition hover:bg-slate-800"
+          >
+            🔍
+          </button>
+        </form>
+      </div>
+      <div class="header-image bg-black">
+        <img
+          src="https://cardiffinternationalchurch.org/wp-content/uploads/2025/07/cropped-Small-group-1-revised-scaled-1.jpg"
+          alt="Cardiff International Church small group" class="h-[400px]
+          md:h-[630px] w-full object-cover" />
+      </div>
+    </header>
+
+    <nav
+      class="main-navigation max-w-7xl mx-auto bg-slate-700 text-white shadow-xl rounded-b-lg mb-12"
+      role="navigation"
+    >
+      <div class="px-4 md:px-6">
+        <div class="flex items-center justify-between py-3 md:hidden">
+          <span
+            class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300"
+            >Menu</span
+          >
+          <button
+            class="menu-toggle inline-flex items-center justify-center rounded-md px-3 py-2 text-2xl hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-700 focus:ring-amber-400"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            ☰
+          </button>
+        </div>
+        <ul
+          id="primary-navigation"
+          class="nav-menu hidden flex-col divide-y divide-slate-600 text-xs font-semibold uppercase md:flex md:flex-row md:flex-nowrap md:items-center md:gap-0 md:divide-y-0 md:text-sm md:whitespace-nowrap"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="block px-2 py-3 text-amber-300 hover:bg-slate-600 md:rounded-md md:px-3"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="purpose-of-life.html"
+              class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3"
+              >Purpose of Life</a
+            >
+          </li>
+          <li class="relative group">
+            <a
+              href="whats-on.html"
+              class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md"
+            >
+              <span>What's On</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul
+              class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex"
+            >
+              <li>
+                <a
+                  href="sunday.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Sunday</a
+                >
+              </li>
+              <li>
+                <a
+                  href="small-group-fellowship.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Small Group Fellowship</a
+                >
+              </li>
+              <li>
+                <a
+                  href="revival-worship-night.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Revival Worship Night</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a
+              href="free-classes.html"
+              class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md"
+            >
+              <span>Free Classes</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul
+              class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex"
+            >
+              <li>
+                <a
+                  href="free-international-cafe.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Free International Cafe</a
+                >
+              </li>
+              <li>
+                <a
+                  href="free-english-class.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Free English Class</a
+                >
+              </li>
+              <li>
+                <a
+                  href="free-korean-class.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Free Korean Class</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="mission.html"
+              class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3"
+              >Mission</a
+            >
+          </li>
+          <li>
+            <a
+              href="special-events.html"
+              class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3"
+              >Special Events</a
+            >
+          </li>
+          <li class="relative group">
+            <a
+              href="photos.html"
+              class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md"
+            >
+              <span>Photo News</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul
+              class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex"
+            >
+              <li>
+                <a
+                  href="photos-2008-2010.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >2008-2010</a
+                >
+              </li>
+              <li>
+                <a
+                  href="photos-2011-2015.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >2011-2015</a
+                >
+              </li>
+              <li>
+                <a
+                  href="photos-2016-2020.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >2016-2020</a
+                >
+              </li>
+              <li>
+                <a
+                  href="photos-2021-2025.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >2021-2025</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="safeguarding.html"
+              class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3"
+              >Safeguarding</a
+            >
+          </li>
+          <li class="relative group">
+            <a
+              href="about.html"
+              class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md"
+            >
+              <span>About Us</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul
+              class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex"
+            >
+              <li>
+                <a
+                  href="pastor.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Pastor</a
+                >
+              </li>
+              <li>
+                <a
+                  href="leadership-team.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Leadership Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="nationalities.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >Nationalities at CIC</a
+                >
+              </li>
+              <li>
+                <a
+                  href="what-we-believe.html"
+                  class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500"
+                  >What We Believe</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main-content" class="px-4 pb-16">
+      <div class="mx-auto flex max-w-7xl flex-col gap-12">
+        <section
+        id="upcoming-events"
+        class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-white p-12 shadow-2xl md:p-16"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-cicGold/5 to-transparent"
+          ></div>
+          <div class="relative space-y-16">
+            <div class="space-y-8 text-center">
+              <div
+                class="inline-flex items-center rounded-full bg-cicGold/10 px-4 py-2"
+              >
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.4em] text-cicGold md:text-sm"
+                  >About CIC</span
+                >
+
+              </div>
+
+              <h3
+                class="font-heading text-4xl text-slate-900 md:text-5xl lg:text-6xl"
+              >
+                Pastor
+              </h3>
+
+              <div
+                class="mx-auto max-w-4xl space-y-6 text-lg leading-8 text-slate-600 md:text-xl"
+              >
+                <p class="text-2xl font-medium text-slate-800">
+                  Rev. Gi-Jung Song<br />
+                </p>
+
+                <figure
+                class="w-80 h-100 float-right overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <img
+                    src="https://newportinternationalchurch.org/wp-content/uploads/2024/03/GJ-photo-brighter.jpg"
+                    alt="Gi-Jung Song and Ji-Hee Lee"
+                    class="object-cover transition duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  ></div>
+                </figure>
+
+                <p>
+                  Ps GJ Song graduated with a Bachelor of Theology (BTh) from
+
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="http://hsiec.hansei.ac.kr/eng/index.html">Hansei University</a>
+
+                  and a Master of Theology (MTh) from
+
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://www.ust.ac.uk/about-us/what-is-union">Wales Evangelical School of Theology</a>,
+
+                  (2001-2002, now Union School of Theology). He resigned from his military
+                  career as a captain in 1992 and was born again and baptised at 
+                  
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://english.fgtv.com/">Yoido Full Gospel Church</a>.
+                  
+                  His ministry journey includes serving at
+                  
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://english.fgtv.com/">Grace & Truth Church</a>,
+
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://english.fgtv.com/">Highfields Church</a>,
+
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://english.fgtv.com/">Brackla Tabernacle</a>,
+                  
+                  as well as missions across Europe in
+                  countries like the UK (Wales), Latvia, Ukraine, etc. He was one of seven
+                  delegates representing Wales at the 4th Lausanne Congress, which took place
+                  in South Korea in 2024. He organised the
+                  
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://english.fgtv.com/">Wales & Korea Celebration 2016</a>,
+
+                  commemorating the 150th anniversary of R. J. Thomas’ mission. Ps GJ is the
+                  founder and pastor of
+                  
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://english.fgtv.com/">Cardiff International Church (CIC)</a>,
+                  
+                  serving since 2008,
+                  and is also the pastor of 
+                  
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://english.fgtv.com/">Newport International Church (NIC)</a>,
+                  
+                  from 2021 to the
+                  present.
+                </p>
+                <p>
+                  Ps GJ Song is blessed to be married to Ji-Hee Lee, who also serves on the CIC Leadership Team.
+                  They enjoy sports, walking, and gardening together, and Ji-Hee has a keen interest in trying
+                  out new recipes. Their two grown children are both pursuing their passions—one teaches English
+                  in South Korea, and the other is working as a medical doctor in the UK, aiming to provide
+                  healthcare in the developing world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
