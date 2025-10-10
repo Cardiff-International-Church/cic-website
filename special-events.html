@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Events | Cardiff International Church | a channel of God's love & blessing to all nations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cicGold: '#b8860b',
+                        cicNavy: '#0f172a'
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+                        heading: ['"Playfair Display"', 'Georgia', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        /* Ensure dropdown menus work properly */
+        .nav-menu .group:hover .sub-menu,
+        .nav-menu .group:focus-within .sub-menu {
+            display: flex !important;
+        }
+        
+        /* Mobile dropdown styles */
+        @media (max-width: 768px) {
+            .nav-menu li.active .sub-menu {
+                display: flex !important;
+            }
+        }
+        
+        /* Ensure proper z-index layering */
+        .nav-menu .sub-menu {
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased">
+    <header class="site-header max-w-7xl mx-auto bg-white shadow-2xl rounded-b-lg overflow-hidden">
+        <div class="header-bar px-6 py-8 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div class="branding space-y-2 text-left">
+                <h1 class="site-title text-3xl md:text-4xl font-bold text-cicGold">
+                    <a href="index.html" class="hover:text-amber-500 transition-colors">Cardiff International Church</a>
+                </h1>
+                <p class="site-tagline text-base md:text-lg italic text-slate-600">a channel of God's love & blessing to all nations</p>
+            </div>
+            <form class="search-container flex w-full max-w-xs gap-3 items-center md:justify-end" role="search">
+                <label for="search" class="sr-only">Search</label>
+                <input type="search" id="search" placeholder="Search..." aria-label="Search" class="w-full rounded-full border border-slate-300/70 bg-white px-4 py-2 text-sm focus:border-cicGold focus:outline-none focus:ring-2 focus:ring-cicGold/40">
+                <button type="submit" aria-label="Search" class="grid h-11 w-11 place-items-center rounded-full bg-cicNavy text-white text-lg shadow-md transition hover:bg-slate-800">🔍</button>
+            </form>
+        </div>
+        <div class="header-image bg-black">
+            <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2019/07/cropped-20190714_162207.jpg" alt="Cardiff International Church outdoor gathering" class="h-[400px] md:h-[630px] w-full object-cover">
+        </div>
+    </header>
+
+    <nav class="main-navigation max-w-7xl mx-auto bg-slate-700 text-white shadow-xl rounded-b-lg mb-12" role="navigation">
+        <div class="px-4 md:px-6">
+            <div class="flex items-center justify-between py-3 md:hidden">
+                <span class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">Menu</span>
+                <button class="menu-toggle inline-flex items-center justify-center rounded-md px-3 py-2 text-2xl hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-700 focus:ring-amber-400" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            </div>
+            <ul id="primary-navigation" class="nav-menu hidden flex-col divide-y divide-slate-600 text-xs font-semibold uppercase md:flex md:flex-row md:flex-nowrap md:items-center md:gap-0 md:divide-y-0 md:text-sm md:whitespace-nowrap">
+                <li><a href="index.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Home</a></li>
+                <li><a href="purpose-of-life.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Purpose of Life</a></li>
+                <li class="relative group">
+                    <a href="whats-on.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>What's On</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="sunday.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Sunday Service</a></li>
+                        <li><a href="small-group-fellowship.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Small Group Fellowship</a></li>
+                        <li><a href="revival-worship-night.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Revival Worship Night</a></li>
+                        <li><a href="international-cafe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">International Cafe</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                    <a href="free-classes.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>Free Classes</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="free-english-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free English Class</a></li>
+                        <li><a href="free-korean-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free Korean Class</a></li>
+                    </ul>
+                </li>
+                <li><a href="mission.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Mission</a></li>
+                <li><a href="special-events.html" class="block px-2 py-3 text-amber-300 hover:bg-slate-600 md:rounded-md md:px-3">Special Events</a></li>
+                <li class="relative group">
+                    <a href="photos.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>Photo News</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="photos-2008-2010.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2008-2010</a></li>
+                        <li><a href="photos-2011-2015.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2011-2015</a></li>
+                        <li><a href="photos-2016-2020.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2016-2020</a></li>
+                        <li><a href="photos-2021-2025.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2021-2025</a></li>
+                    </ul>
+                </li>
+                <li><a href="safeguarding.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Safeguarding</a></li>
+                <li class="relative group">
+                    <a href="about.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+                        <span>About Us</span>
+                        <span class="text-xs">▾</span>
+                    </a>
+                    <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+                        <li><a href="pastor.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Pastor</a></li>
+                        <li><a href="leadership-team.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Leadership Team</a></li>
+                        <li><a href="nationalities.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Nationalities at CIC</a></li>
+                        <li><a href="what-we-believe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">What We Believe</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="px-4 pb-16">
+        <div class="mx-auto flex max-w-7xl flex-col gap-12">
+            <section id="special-events-content" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-white p-12 shadow-2xl md:p-16">
+                <div class="absolute inset-0 bg-gradient-to-r from-cicGold/5 to-transparent"></div>
+                <div class="relative space-y-16">
+                    <!-- Page Header -->
+                    <div class="text-center space-y-6">
+                        <div class="inline-flex items-center rounded-full bg-cicGold/10 px-4 py-2">
+                            <span class="text-xs font-semibold uppercase tracking-[0.4em] text-cicGold md:text-sm">Special Events</span>
+                        </div>
+                        <h1 class="font-heading text-4xl text-slate-900 md:text-5xl lg:text-6xl">Special Events</h1>
+                    </div>
+
+                    <!-- Trips & Weekend Away -->
+                    <div class="space-y-6 text-center max-w-5xl mx-auto">
+                        <h2 class="font-heading text-3xl text-slate-900 md:text-4xl">Trips & Weekend Away</h2>
+                        <p class="text-lg text-slate-700 leading-relaxed">CIC organises day trips for sightseeing, hiking, and picnics, allowing us to explore the beautiful Welsh culture and heritage.</p>
+                        <p class="text-lg text-slate-700 leading-relaxed">We also plan occasional weekend getaways for fellowship, providing an opportunity to connect and grow together in a relaxed and enjoyable setting.</p>
+                        
+                        <!-- Photos after Trips section (2 photos) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="http://www.cardiffinternationalchurch.org/wp-content/uploads/2015/04/20151017_112918-1024x576.jpg" alt="Group trip to Welsh countryside" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="http://www.cardiffinternationalchurch.org/wp-content/uploads/2015/04/At-St-Fagans-1024x682.jpg" alt="Weekend fellowship getaway" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- International Night -->
+                    <div class="space-y-6 text-center max-w-5xl mx-auto">
+                        <h2 class="font-heading text-3xl text-slate-900 md:text-4xl">International Night</h2>
+                        <p class="text-lg text-slate-700 leading-relaxed">We hold international events from time to time, where you can enjoy a variety of national dishes, songs, and music, as well as presentations and stories from different parts of the world.</p>
+                        <p class="text-lg text-slate-700 leading-relaxed">It's a fun and educational experience, allowing us to connect with and appreciate diverse cultures and histories.</p>
+                        
+                        <!-- Photos after International Night section (4 photos) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2017/01/20171117_202751-500x281.jpg" alt="International cultural celebration" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2017/01/20171117_191429-500x281.jpg" alt="Cultural food and fellowship" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2017/01/20171117_205835-1-500x281.jpg" alt="International music and presentations" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2017/01/20171020_204618-500x281.jpg" alt="Community cultural exchange" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Celebrations -->
+                    <div class="space-y-6 text-center max-w-5xl mx-auto">
+                        <h2 class="font-heading text-3xl text-slate-900 md:text-4xl">Special Celebrations</h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                            <!-- Christmas Card -->
+                            <div class="group bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-slate-200/60 p-6 shadow-lg ring-1 ring-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-cicGold/20 hover:border-cicGold/30">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="text-2xl">🎄</span>
+                                    <h3 class="font-semibold text-slate-900 text-lg">Christmas</h3>
+                                </div>
+                                <p class="text-slate-700 leading-relaxed">Is a celebration of Jesus' birth, who came to save us from our sins (Matthew 1:21).</p>
+                            </div>
+                            
+                            <!-- Easter Card -->
+                            <div class="group bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-slate-200/60 p-6 shadow-lg ring-1 ring-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-cicGold/20 hover:border-cicGold/30">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="text-2xl">✝️</span>
+                                    <h3 class="font-semibold text-slate-900 text-lg">Easter</h3>
+                                </div>
+                                <p class="text-slate-700 leading-relaxed">Commemorates Jesus' resurrection, which conquered death and gives us hope for eternal life (Luke 24:1-12; 1 Corinthians 15:1-8).</p>
+                            </div>
+                            
+                            <!-- Pentecost Card -->
+                            <div class="group bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-slate-200/60 p-6 shadow-lg ring-1 ring-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-cicGold/20 hover:border-cicGold/30">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="text-2xl">🔥</span>
+                                    <h3 class="font-semibold text-slate-900 text-lg">Pentecost</h3>
+                                </div>
+                                <p class="text-slate-700 leading-relaxed">Is when we celebrate the coming of the Holy Spirit, marking the birth of the church (Acts 2:1-13).</p>
+                            </div>
+                            
+                            <!-- Baptism Card -->
+                            <div class="group bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-slate-200/60 p-6 shadow-lg ring-1 ring-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-cicGold/20 hover:border-cicGold/30">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="text-2xl">💧</span>
+                                    <h3 class="font-semibold text-slate-900 text-lg">Baptism</h3>
+                                </div>
+                                <p class="text-slate-700 leading-relaxed">Is for those who have accepted Jesus as Lord and Savior, symbolising their new life in Him (Acts 8:26-39).</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-slate-700 leading-relaxed max-w-3xl mx-auto text-2xl"
+                        >We also celebrate Communion to remember Jesus' sacrifice on the cross for our sins (Matthew 26:26-28; Luke 22:19-20; 1 Corinthians 11:17-34).
+                    </p>
+                        
+                        <!-- Photos after Special Celebrations section (2 photos) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="http://www.cardiffinternationalchurch.org/wp-content/uploads/2017/01/20171225_113238-1024x576.jpg" alt="Christmas celebration service" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <div class="group overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2020/02/20200214_200618.jpg" alt="Special worship gathering" class="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Note -->
+                    <div class="text-center">
+                        <p class="text-slate-600">Upcoming special events are updated on the <a href="index.html" class="text-cicGold hover:text-amber-600 font-medium">Welcome</a> page on our website.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer bg-slate-700 text-slate-200">
+        <div class="mx-auto max-w-7xl px-4 py-12">
+            <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                <!-- Church Info Section -->
+                <div class="md:col-span-2 lg:col-span-2">
+                    <h3 class="mb-4 text-lg font-semibold text-white">Cardiff International Church</h3>
+                    <p class="mb-4 text-sm leading-relaxed text-slate-300">
+                        A place where faith meets fellowship and hearts are drawn closer to God's love. 
+                        We aim to be a beacon of hope and spiritual growth within our international backgrounds.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 transition-colors hover:text-cicGold" aria-label="Facebook">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-slate-400 transition-colors hover:text-cicGold" aria-label="YouTube">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-slate-300 transition-colors hover:text-cicGold">About Us</a></li>
+                        <li><a href="whats-on.html" class="text-slate-300 transition-colors hover:text-cicGold">Sunday Services</a></li>
+                        <li><a href="special-events.html" class="text-slate-300 transition-colors hover:text-cicGold">Events</a></li>
+                        <li><a href="photos.html" class="text-slate-300 transition-colors hover:text-cicGold">Gallery</a></li>
+                        <li><a href="safeguarding.html" class="text-slate-300 transition-colors hover:text-cicGold">Safeguarding</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Contact Info</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-start space-x-2">
+                            <svg class="mt-0.5 h-4 w-4 flex-shrink-0 text-cicGold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>Cardiff, Wales<br>United Kingdom</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="h-4 w-4 flex-shrink-0 text-cicGold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:info@cardiffinternationalchurch.org" class="transition-colors hover:text-cicGold">cardiffinternationalchurch@gmail.com</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="h-4 w-4 flex-shrink-0 text-cicGold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Sunday Service: 11:00 AM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="mt-8 border-t border-slate-600 pt-6 text-center">
+                <p class="text-sm text-slate-400">&copy; 2025 Cardiff International Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
