@@ -17,8 +17,7 @@ body:
       label: Acceptance Criteria
       description: List the specific criteria that must be met for this story to be considered complete. Use checklists (- [ ]).
       placeholder: |
-        - [ ] Criterion 1
-        - [ ] Criterion 2
+        - Describe here what is required to complete this story
     validations:
       required: true
 
@@ -27,15 +26,27 @@ body:
     attributes:
       label: High Level Requirements
       description: Describe the overall business goal of this user story.
+      placeholder: |
+        - Describe here the high level requirements for this story
+    validations:
+      required: false
 
   - type: textarea
     id: dev-notes
     attributes:
       label: Dev Notes
       description: Technical details, implementation notes, or dependencies.
+      placeholder: |
+        - Describe here any technical details, implementation notes, or dependencies
+    validations:
+      required: false
 
   - type: textarea
     id: solution-design
     attributes:
       label: Solution Design
       description: Outline the proposed technical solution to implement this story.
+      placeholder: |
+        - Describe here the proposed technical solution to implement this story
+    validations:
+      required: false
