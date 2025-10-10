@@ -1,30 +1,8 @@
-# .github/ISSUE_TEMPLATE/standard.yml
-name: Create Issue
-description: Create a task, bug, or other issue
-title: 'CIC-#[NUMBER]: '
-labels: []
+name: Standard Task
+description: A standard task or bug fix.
+title: 'CIC-[NUMBER]: [Your Title Here]'
+labels: ['task']
 body:
-  - type: dropdown
-    id: issue-type
-    attributes:
-      label: 'Issue Type'
-      description: 'Select the type of issue'
-      options:
-        - Task
-        - Bug
-        - Enhancement
-        - Documentation
-    validations:
-      required: true
-  
-  - type: textarea
-    id: title
-    attributes:
-      label: 'Title'
-      description: 'Enter your issue title'
-    validations:
-      required: true
-  
   - type: textarea
     id: description
     attributes:
