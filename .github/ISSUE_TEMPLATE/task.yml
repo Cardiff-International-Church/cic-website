@@ -1,0 +1,41 @@
+name: Task
+description: A standard, well-defined piece of work or a sub-task of a larger story.
+title: ""
+labels: ['task']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of the task.
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: List the specific requirements or acceptance criteria for this task. Use checklists (- [ ]) for items that need to be completed.
+      placeholder: |
+        - [ ] Requirement 1
+        - [ ] Requirement 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: high-level-requirements
+    attributes:
+      label: High Level Requirements
+      description: Describe the overall goal or the business value this task contributes to.
+
+  - type: textarea
+    id: dev-notes
+    attributes:
+      label: Dev Notes
+      description: Any technical details, implementation notes, or potential challenges for the developer.
+
+  - type: textarea
+    id: solution-design
+    attributes:
+      label: Solution Design
+      description: Outline the proposed technical solution. This can include architectural changes, new components, or API endpoints.
