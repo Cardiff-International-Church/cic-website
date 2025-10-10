@@ -1,6 +1,5 @@
 name: Task
 description: A standard, well-defined piece of work or a sub-task of a larger story.
-title: ""
 labels: ['task']
 body:
   - type: textarea

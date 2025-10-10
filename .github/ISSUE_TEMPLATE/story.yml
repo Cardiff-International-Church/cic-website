@@ -1,0 +1,41 @@
+name: User Story
+description: A feature or requirement from an end-user perspective.
+labels: ['story']
+body:
+  - type: textarea
+    id: user-story-narrative
+    attributes:
+      label: User Story Narrative
+      description: Frame the story from a user's point of view.
+      placeholder: "As a [type of user], I want [to perform some action] so that [I can achieve some goal]."
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Acceptance Criteria
+      description: List the specific criteria that must be met for this story to be considered complete. Use checklists (- [ ]).
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: high-level-requirements
+    attributes:
+      label: High Level Requirements
+      description: Describe the overall business goal of this user story.
+
+  - type: textarea
+    id: dev-notes
+    attributes:
+      label: Dev Notes
+      description: Technical details, implementation notes, or dependencies.
+
+  - type: textarea
+    id: solution-design
+    attributes:
+      label: Solution Design
+      description: Outline the proposed technical solution to implement this story.
