@@ -1,6 +1,6 @@
 name: Standard Task
 description: A standard task or bug fix.
-title: 'CIC-[NUMBER]: [Your Title Here]'
+title: 'CIC-[LEAVE_THIS_EMPTY]: ' #  <-- Just the prefix
 labels: ['task']
 body:
   - type: textarea
