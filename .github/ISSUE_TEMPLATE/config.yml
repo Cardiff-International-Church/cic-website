@@ -1,0 +1,10 @@
+# .github/ISSUE_TEMPLATE/config.yml
+
+# This setting disables the "Open a blank issue" option.
+blank_issues_enabled: false
+
+# This provides a link to another place for users to get help, like Slack or a discussion board.
+contact_links:
+  - name: Lucian
+    url: # Add a URL to your team's chat or discussion forum here
+    about: Please ask and answer questions here.
