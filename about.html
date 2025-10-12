@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Cardiff International Church | a channel of God's love & blessing to all
+      nations
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cicGold: "#b8860b",
+              cicNavy: "#0f172a",
+            },
+            fontFamily: {
+              sans: [
+                '"Inter"',
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                '"Segoe UI"',
+                "sans-serif",
+              ],
+              heading: ['"Playfair Display"', "Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Ensure dropdown menus work properly */
+      .nav-menu .group:hover .sub-menu,
+      .nav-menu .group:focus-within .sub-menu {
+        display: flex !important;
+      }
+
+      /* Mobile dropdown styles */
+      @media (max-width: 768px) {
+        .nav-menu li.active .sub-menu {
+          display: flex !important;
+        }
+      }
+
+      /* Ensure proper z-index layering */
+      .nav-menu .sub-menu {
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-100 text-slate-800 font-sans antialiased">
+    <header class="site-header max-w-7xl mx-auto bg-white shadow-2xl rounded-b-lg overflow-hidden">
+      <div class="header-bar px-6 py-8 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <div class="branding space-y-2 text-left">
+          <h1 class="site-title text-3xl md:text-4xl font-bold text-cicGold">
+            <a href="index.html" class="hover:text-amber-500 transition-colors">Cardiff International Church</a>
+          </h1>
+          <p class="site-tagline text-base md:text-lg italic text-slate-600">
+            a channel of God's love & blessing to all nations
+          </p>
+        </div>
+        <form class="search-container flex w-full max-w-xs gap-3 items-center md:justify-end" role="search">
+          <label for="search" class="sr-only">Search</label>
+          <input type="search" id="search" placeholder="Search..." aria-label="Search" class="w-full rounded-full border border-slate-300/70 bg-white px-4 py-2 text-sm focus:border-cicGold focus:outline-none focus:ring-2 focus:ring-cicGold/40"/>
+          <button type="submit" aria-label="Search" class="grid h-11 w-11 place-items-center rounded-full bg-cicNavy text-white text-lg shadow-md transition hover:bg-slate-800">
+            🔍
+          </button>
+        </form>
+      </div>
+      <div class="header-image bg-black">
+        <img
+          src="https://cardiffinternationalchurch.org/wp-content/uploads/2019/07/cropped-Group-Aberdare-2.jpg"
+          alt="Cardiff International Church outdoor gathering" class="h-[400px]
+          md:h-[630px] w-full object-cover" 
+        />
+      </div>
+    </header>
+
+    <nav class="main-navigation max-w-7xl mx-auto bg-slate-700 text-white shadow-xl rounded-b-lg mb-12" role="navigation">
+      <div class="px-4 md:px-6">
+
+        <div class="flex items-center justify-between py-3 md:hidden">
+          <span class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">Menu</span>
+          <button class="menu-toggle inline-flex items-center justify-center rounded-md px-3 py-2 text-2xl hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-700 focus:ring-amber-400" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+            ☰
+          </button>
+        </div>
+
+        <ul
+          id="primary-navigation"
+          class="nav-menu hidden flex-col divide-y divide-slate-600 text-xs font-semibold uppercase md:flex md:flex-row md:flex-nowrap md:items-center md:gap-0 md:divide-y-0 md:text-sm md:whitespace-nowrap"
+        >
+          <li><a href="index.html" class="block px-2 py-3 text-amber-300 hover:bg-slate-600 md:rounded-md md:px-3">Home</a></li>
+          <li><a href="purpose-of-life.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Purpose of Life</a></li>
+          <li class="relative group">
+            <a href="whats-on.html"class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+              <span>What's On</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+              <li><a href="sunday.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Sunday</a></li>
+              <li><a href="small-group-fellowship.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Small Group Fellowship</a></li>
+              <li><a href="revival-worship-night.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Revival Worship Night</a></li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a href="free-classes.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+              <span>Free Classes</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+              <li><a href="free-international-cafe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free International Cafe</a></li>
+              <li><a href="free-english-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free English Class</a></li>
+              <li><a href="free-korean-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free Korean Class</a></li>
+            </ul>
+          </li>
+          <li><a href="mission.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Mission</a></li>
+          <li><a href="special-events.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Special Events</a></li>
+          <li class="relative group">
+            <a href="photos.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+              <span>Photo News</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+              <li><a href="photos-2008-2010.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2008-2010</a></li>
+              <li><a href="photos-2011-2015.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2011-2015</a></li>
+              <li><a href="photos-2016-2020.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2016-2020</a></li>
+              <li><a href="photos-2021-2025.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">2021-2025</a></li>
+            </ul>
+          </li>
+          <li><a href="safeguarding.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Safeguarding</a></li>
+          <li class="relative group">
+            <a href="about.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
+              <span>About Us</span>
+              <span class="text-xs">▾</span>
+            </a>
+            <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
+              <li><a href="pastor.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Pastor</a></li>
+              <li>
+                <a href="leadership-team.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Leadership Team</a></li>
+              <li>
+                <a href="nationalities.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Nationalities at CIC</a></li>
+              <li>
+                <a href="what-we-believe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">What We Believe</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main-content" class="px-4 pb-16">
+      <div class="mx-auto flex max-w-7xl flex-col gap-12">
+        <section id="upcoming-events" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-white p-12 shadow-2xl md:p-16">
+          <div class="absolute inset-0 bg-gradient-to-r from-cicGold/5 to-transparent"></div>
+          <div class="relative space-y-16">
+            <div class="space-y-8 text-center">
+              <div class="inline-flex items-center rounded-full bg-cicGold/10 px-4 py-2">
+                <span class="text-xs font-semibold uppercase tracking-[0.4em] text-cicGold md:text-sm">About CIC</span>
+              </div>
+              <h3 class="font-heading text-4xl text-slate-900 md:text-5xl lg:text-6xl">About Us</h3>
+
+              <div
+                class="mx-auto max-w-4xl space-y-6 text-lg leading-8 text-slate-600 md:text-xl"
+              >
+                <p class="text-2xl font-medium text-slate-800">
+                  We are a vibrant multinational family with members from<br /> 
+                  over 110 countries since its inception in 2008
+                </p>
+                <p>
+                  The church is a reflection of the global body of Christ, bringing together<br />
+                  diverse cultures and backgrounds united in faith and fellowship.
+                </p>
+                <p>
+                  CIC is a <b>Christ-centred</b> church, where Jesus is at the heart of all that
+                  we do.<br />We are committed to being <b>Bible-based</b>, grounding everything in
+                  the Word of God,<br />and we seek to be <b>Spirit-filled and led</b>, allowing the
+                  Holy Spirit to guide<br />our lives and ministry. As a <b>missional</b> church, we
+                  are passionate about sharing<br />the gospel and reaching out to others with
+                  the love of Christ.
+                </p>
+                <p>
+                  Cardiff International Church (CIC) is working in close partnership with
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="http://newportinternationalchurch.org/">Newport International Church (NIC)</a>
+                   as part of 
+                   <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                   href="https://acuk.online/">AC UK</a>,
+                  a dynamic Holy Spirit-led mission movement that traces its roots back to the 1904–1905
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://en.wikipedia.org/wiki/1904%E2%80%931905_Welsh_revival">Welsh Revival</a>.
+                  This partnership allows us to carry forward the legacy of
+                  revival, seeking to impact lives and spread the gospel in Wales and
+                  beyond.
+                </p>
+
+                <p class="text-xl font-semibold text-cicNavy">
+                  Vision Statement: Our Calling & Vision
+                </p>
+                <p>
+                  Our calling and vision is to be a channel of God’s love and blessing,
+                  making disciples of all nations by the power of the Holy Spirit.
+                </p>
+                <p>
+                  We are called by God at CIC to be a channel of His love and blessing to
+                  all nations (Genesis 12:1-3). God has proven His faithfulness to us,
+                  teaching us His ownership and leadership in every step of our journey.
+                  Together, we learn and support one another in unity as one family in the
+                  love of God. Our desire is to become more like Jesus, striving to
+                  maintain a healthy, balanced church that nurtures an upward relationship
+                  with God, inward fellowship within the church family, and outward
+                  mission in the community and beyond.
+                </p>
+                <p>
+                  As we write Acts 29, we continue to fulfill the Great Commission
+                  (Matthew 28:18-20), empowered by the Holy Spirit and working with
+                  evangelical networks locally and globally for shared mission.
+                </p>
+
+                <p class="text-xl font-semibold text-cicNavy">
+                  The Birth of CIC
+                </p>
+                <div class="birth">
+                  <div class="text">
+                    <p>
+                      CIC was planted through Brackla Tabernacle (BT), under the
+                      leadership of Senior Pastor Roy Lewis. On 13 July 2008, Pastor GJ
+                      Song, who was part of the pastoral team at BT, was released to plant
+                      CIC.
+                    </p>
+                    <br />
+                    <p>
+                      In 2009, CIC merged with Cardiff Apostolic Church, and Pastor GJ
+                      Song was inducted as the Pastor of the newly formed Cardiff
+                      International Church.
+                    </p>
+                    <br />
+
+                    <div class="space-y-8">
+                      <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+                        <figure
+                          class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                        >
+                          <img
+                            src="https://cardiffinternationalchurch.org/wp-content/uploads/2019/12/Opening-Service.jpg"
+                            alt="People listening to pastor"
+                            class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                          />
+                          <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                          ></div>
+                        </figure>
+                        <figure
+                          class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                        >
+                          <img
+                            src="https://cardiffinternationalchurch.org/wp-content/uploads/2019/12/Induction-1024x768.jpg"
+                            alt="Church band playing"
+                            class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                          />
+                          <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                          ></div>
+                        </figure>
+                        <figure
+                          class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                        >
+                          <img
+                            src="https://cardiffinternationalchurch.org/wp-content/uploads/2019/12/Induction-1-768x576.jpg"
+                            alt="People listening to pastor with Jesus for the World banner"
+                            class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                          />
+                          <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                          ></div>
+                        </figure>
+                      </div>
+                      <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+                      </div>
+                    </div>
+
+                <p>(Photos: Ps GJ Song’s Induction Service in 2009)</p>
+                <p>
+                  “Many are the plans in a person’s heart, but it is the Lord’s purpose
+                  that prevails.” Proverbs 19:21
+                </p>
+                <br />
+
+                <p class="text-xl font-semibold text-cicNavy">
+                  Wales-Korea Connection: Mission & Revivals
+                </p>
+                <br />
+                <p>
+                  The deep spiritual and historical connection between Wales and Korea is highlighted 
+                  by the significant role of Welsh missionary Robert Jermain Thomas, who sacrificed 
+                  his life to bring the gospel to Korea. The 1904 Welsh Revival further fueled this 
+                  connection, igniting a revival movement that inspired missionaries and strengthened 
+                  the growth of Christianity in Korea.
+                </p>
+                <br />
+
+                <figure
+                class="w-90 h-41 float-right overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <img
+                  src="https://cardiffinternationalchurch.org/wp-content/uploads/2020/03/Robert_Jermain_Thomas.jpg"
+                  alt="Robert Jermain Thomas"
+                  class="h-48 md:h-58 w-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+              </figure>
+
+                <p>
+                  Robert Jermain Thomas, a young Welsh missionary, tragically lost his life in 1866 
+                  when the USA ship General Sherman was attacked and burned by Korean soldiers in 
+                  the Taedong River. Before his death, Thomas had thrown Bibles into the river, one 
+                  of which was later found by a local leader. This Bible was used as wallpaper in his 
+                  home, and as he read its pages, he became a Christian. His conversion led to the 
+                  faith of his family, and their home became a church, which laid the foundation for 
+                  the 1907 Great Korean Revival.
+                </p>
+
+
+                <br />
+                
+                <figure
+                class="w-90 h-41 float-left overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <img
+                  src="http://www.cardiffinternationalchurch.org/wp-content/uploads/2020/03/Evan-Roberts.jpg"
+                  alt="Evan Roberts"
+                  class="h-48 md:h-44 w-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+              </figure>
+
+                <p>
+                  The 1904 Welsh Revival had a lasting impact on the 1907 Great Korean Revival. 
+                  When a group of Christians in Korea heard about the Revival in Wales, they were 
+                  so moved that they started a prayer meeting, which became the foundation for the 
+                  Korean Revival. One of the key elements they embraced was the loud, passionate 
+                  prayer style from Wales, a practice that continues in Korean prayer meetings.
+                </p>
+                <br />
+                <p>
+                  Photo (L): Evan John Roberts (8 June 1878 – 29 January 1951) who was an evangelist 
+                  and leading figure of the 1904-1905 Welsh Revival.
+                </p>
+                <br />
+
+                <p class="text-xl font-semibold text-cicNavy">
+                  Wales & Korea – 150th Anniversary Celebration
+                </p>
+                <br />
+
+                <figure
+                  class="w-90 h-41 float-right overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                >
+                  <img
+                    src="https://cardiffinternationalchurch.org/wp-content/uploads/2016/02/20160915_193222-768x432.jpg"
+                    alt="People listening to pastor"
+                    class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  ></div>
+                </figure>
+                <p>
+                  To mark the 150th anniversary of Welsh missionary Robert Jermain Thomas’ mission 
+                  to Korea, the 
+                  <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                  href="https://www.youtube.com/watch?v=3KVJ2tUmkEo">Wales & Korea – 150th Anniversary Celebration</a>
+                   was held on 14-15 
+                  September 2016 at Cardiff City Hall and St David’s Hall. Organised by CIC 
+                  (Pastor Gi-Jung Song) and supported by local church leaders, the Evangelical
+                  <br />
+                  <br />
+                  
+                  Alliance of Wales, the Cambrensis Choir, Sound of Wales, the Bible Society in 
+                  Wales, and a Korean choir (SFGC), the event included prayer for Wales and Korea, 
+                  celebrating the enduring legacy of this powerful spiritual connection between 
+                  the two nations. (Photos below)
+                </p>
+                <br />
+
+
+                <div class="space-y-8">
+                  <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+                    <figure
+                      class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                    >
+                      <img
+                        src="https://cardiffinternationalchurch.org/wp-content/uploads/2016/02/20160915_200522-300x169.jpg"
+                        alt="People up on stage"
+                        class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      ></div>
+                    </figure>
+                    <figure
+                      class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                    >
+                      <img
+                        src="https://cardiffinternationalchurch.org/wp-content/uploads/2016/02/20160914_202800-300x169.jpg"
+                        alt="Anniversary banquet at St David's Hall"
+                        class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      ></div>
+                    </figure>
+                    <figure
+                      class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                    >
+                      <img
+                        src="https://cardiffinternationalchurch.org/wp-content/uploads/2016/02/20160915_213701-500x281.jpg"
+                        alt="Choir singing"
+                        class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      ></div>
+                    </figure>
+                  </div>
+                  <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+                    <figure
+                      class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                    >
+                      <img
+                        src="https://cardiffinternationalchurch.org/wp-content/uploads/2009/07/150-Celebration-at-St-Davids-Hall-768x512.jpg"
+                        alt="Looking towards the audience from stage"
+                        class="h-44 md:h-56 w-full object-cover transition duration-500 group-hover:scale-110"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      ></div>
+                    </figure>
+                    <figure
+                      class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                    >
+                      <img
+                        src="https://cardiffinternationalchurch.org/wp-content/uploads/2016/02/20160915_205050-768x432.jpg"
+                        alt="Audience joining in to the music"
+                        class="h-44 md:h-56 w-full object-cover transition duration-500 group-hover:scale-110"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      ></div>
+                    </figure>
+                  </div>
+                </div>
+
+              <br />
+                
+                <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 m-2 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                href="pastor.html">Pastor</a>
+                <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 m-2 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                href="leadership-team.html">Leadership Team</a>
+                <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 m-2 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                href="nationalities.html">Nations at CIC</a>
+                <a class="event rounded-2xl border border-slate-2 bg-slate-50/80 text-cicGold/70 font-bold p-1 m-2 shadow-sm transition hover:-translate-y-1 hover:border-cicGold/70 hover:shadow-lg"
+                href="what-we-believe.html">What We Believe</a>
+                </ul>
+
+              </div>
+
+    <content>
+      </p>
+
+
+    </content>
+  </body>
+</html>
