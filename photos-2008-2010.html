@@ -4,30 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo News 2008-2010 | Cardiff International Church</title>
-    <meta name="description" content="Explore the foundational years (2008-2010) of Cardiff International Church, when our vision of being a channel of God's love to all nations began to take shape.">
-    <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        cicGold: '#D4AF37',
-                        cicNavy: '#1e3a5f'
+                        cicGold: '#b8860b',
+                        cicNavy: '#0f172a'
                     },
                     fontFamily: {
-                        'sans': ['system-ui', 'sans-serif'],
-                        'heading': ['Georgia', 'serif']
+                        sans: ['"Inter"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+                        heading: ['"Playfair Display"', 'Georgia', 'serif']
                     }
                 }
             }
-        }
+        };
     </script>
     <style>
-        .has-dropdown:hover .sub-menu { display: block; }
-        .menu-toggle[aria-expanded="true"] + .nav-menu { display: flex; }
-        @media (min-width: 768px) {
-            .group:hover .sub-menu,
-            .group:focus-within .sub-menu { display: flex; }
+        /* Ensure dropdown menus work properly */
+        .nav-menu .group:hover .sub-menu,
+        .nav-menu .group:focus-within .sub-menu {
+            display: flex !important;
+        }
+        
+        /* Mobile dropdown styles */
+        @media (max-width: 768px) {
+            .nav-menu li.active .sub-menu {
+                display: flex !important;
+            }
+        }
+        
+        /* Ensure proper z-index layering */
+        .nav-menu .sub-menu {
+            z-index: 1000;
         }
     </style>
 </head>
@@ -117,20 +130,22 @@
     <main id="main-content" class="px-4 pb-16">
         <div class="mx-auto flex max-w-7xl flex-col gap-12">
             <!-- Page Header -->
-            <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50 p-8 shadow-lg md:p-12">
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-800/5 to-transparent"></div>
+            <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-white p-12 shadow-2xl md:p-16">
+                <div class="absolute inset-0 bg-gradient-to-r from-cicGold/5 to-transparent"></div>
                 <div class="relative space-y-16">
                     <div class="flex items-center gap-2 text-sm text-slate-600">
                         <a href="photos.html" class="hover:text-cicGold transition-colors">Photo News</a>
                         <span>/</span>
                         <span class="font-semibold text-cicGold">2008-2010</span>
                     </div>
+
                     <div class="text-center space-y-4">
                         <div class="inline-flex items-center rounded-full bg-slate-800/10 px-4 py-2">
                             <span class="text-xs font-semibold uppercase tracking-[0.4em] text-slate-800 md:text-sm">Foundational Era</span>
                         </div>
                         <h1 class="font-heading text-4xl text-slate-900 md:text-5xl lg:text-6xl">Photo News 2008-2010</h1>
                         <p class="mx-auto max-w-2xl text-lg leading-8 text-slate-600">The early years of establishing our international community</p>
+                        
                         <p class="mx-auto max-w-4xl text-center text-lg leading-8 text-slate-700">
                             The foundational years of Cardiff International Church, when our vision of being "a channel of God's love & blessing to all nations" was taking shape. 
                              These years marked the beginning of our multicultural fellowship and the establishment of our core values and mission.
@@ -146,70 +161,74 @@
 
                         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                             <!-- 2008 -->
-                            <article class="group relative overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200 transition-all duration-300 hover:shadow-2xl opacity-75">
-                                <div class="aspect-w-16 aspect-h-9 overflow-hidden">
-                                    <img src="http://www.cardiffinternationalchurch.org/wp-content/uploads/2009/10/Baptism-worship-team-300x170.jpg" 
-                                    alt="2008 church founding activities" 
-                                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
-                                </div>
-                                <div class="p-6 space-y-4">
+                            <article class="h-full flex flex-col rounded-2xl bg-gradient-to-br from-cicGold/10 via-amber-50 to-cicGold/5 shadow-lg ring-2 ring-cicGold/20 transition-all duration-300 hover:shadow-2xl">
+                                <div class="flex-1 p-6 space-y-4">
                                     <div class="flex items-center justify-between">
                                         <h3 class="font-heading text-2xl font-semibold text-slate-900">2008</h3>
-                                        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
-                                            Coming Soon
+                                        <span class="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-800">
+                                            Church Foundation
                                         </span>
                                     </div>
-                                    <p class="text-slate-600 leading-relaxed">The beginning of Cardiff International Church's journey as a multicultural community.</p>
+                                    <p class="text-slate-700 leading-relaxed">The foundational year when Cardiff International Church was established with a vision to be "a channel of God's love & blessing to all nations." The beginning of our multicultural community and international ministry.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="inline-flex items-center rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-800">Church Foundation</span>
+                                        <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">Early Ministry</span>
+                                        <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">International Vision</span>
+                                        <span class="inline-flex items-center rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-800">Community Building</span>
+                                    </div>
                                     <div class="pt-2">
-                                        <span class="inline-flex items-center justify-center w-full rounded-full bg-slate-200 px-6 py-3 text-base font-semibold text-slate-500 cursor-not-allowed">
-                                            2008 Photos (Coming Soon)
-                                        </span>
+                                        <a href="photos-2008.html" 
+                                        class="inline-flex items-center justify-center w-full rounded-full bg-cicGold px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-amber-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-cicGold focus:ring-offset-2">
+                                            View 2008 Photos
+                                        </a>
                                     </div>
                                 </div>
                             </article>
 
                             <!-- 2009 -->
-                            <article class="group relative overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200 transition-all duration-300 hover:shadow-2xl opacity-75">
-                                <div class="aspect-w-16 aspect-h-9 overflow-hidden">
-                                    <img src="http://www.cardiffinternationalchurch.org/wp-content/uploads/2009/10/Baptism-worship-team-300x170.jpg" 
-                                    alt="2009 community growth activities" 
-                                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
-                                </div>
-                                <div class="p-6 space-y-4">
+                            <article class="h-full flex flex-col rounded-2xl bg-gradient-to-br from-cicGold/10 via-amber-50 to-cicGold/5 shadow-lg ring-2 ring-cicGold/20 transition-all duration-300 hover:shadow-2xl">
+                                <div class="flex-1 p-6 space-y-4">
                                     <div class="flex items-center justify-between">
                                         <h3 class="font-heading text-2xl font-semibold text-slate-900">2009</h3>
-                                        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
-                                            Coming Soon
+                                        <span class="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-800">
+                                            Ministry Growth
                                         </span>
                                     </div>
-                                    <p class="text-slate-600 leading-relaxed">Growing our international fellowship and establishing core ministries and activities.</p>
+                                    <p class="text-slate-700 leading-relaxed">A year of significant growth and development, establishing core ministries and expanding our international fellowship. Building stronger connections across cultures and developing foundational programs for our diverse community.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="inline-flex items-center rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-800">Ministry Development</span>
+                                        <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">Community Growth</span>
+                                        <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">International Fellowship</span>
+                                        <span class="inline-flex items-center rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-800">Program Expansion</span>
+                                    </div>
                                     <div class="pt-2">
-                                        <span class="inline-flex items-center justify-center w-full rounded-full bg-slate-200 px-6 py-3 text-base font-semibold text-slate-500 cursor-not-allowed">
-                                            2009 Photos (Coming Soon)
-                                        </span>
+                                        <a href="photos-2009.html" class="inline-flex items-center justify-center w-full rounded-full bg-cicGold px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-amber-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-cicGold focus:ring-offset-2">
+                                            View 2009 Photos
+                                        </a>
                                     </div>
                                 </div>
                             </article>
 
                             <!-- 2010 -->
-                            <article class="group relative overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200 transition-all duration-300 hover:shadow-2xl opacity-75">
-                                <div class="aspect-w-16 aspect-h-9 overflow-hidden">
-                                    <img src="http://www.cardiffinternationalchurch.org/wp-content/uploads/2009/10/Baptism-worship-team-300x170.jpg" 
-                                    alt="2010 ministry development" 
-                                    class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
-                                </div>
-                                <div class="p-6 space-y-4">
+                            <article class="h-full flex flex-col rounded-2xl bg-gradient-to-br from-cicGold/10 via-amber-50 to-cicGold/5 shadow-lg ring-2 ring-cicGold/20 transition-all duration-300 hover:shadow-2xl">
+                                <div class="flex-1 p-6 space-y-4">
                                     <div class="flex items-center justify-between">
                                         <h3 class="font-heading text-2xl font-semibold text-slate-900">2010</h3>
-                                        <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
-                                            Coming Soon
+                                        <span class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-800">
+                                            Foundation Strengthened
                                         </span>
                                     </div>
-                                    <p class="text-slate-600 leading-relaxed">Strengthening our foundation and expanding our reach to more international students and residents.</p>
+                                    <p class="text-slate-700 leading-relaxed">Consolidating our foundation and significantly expanding outreach to international students and residents. A pivotal year establishing sustainable ministries and deeper community connections that would shape our future growth.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="inline-flex items-center rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-800">Foundation Strengthened</span>
+                                        <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">Student Outreach</span>
+                                        <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">Community Expansion</span>
+                                        <span class="inline-flex items-center rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-800">Ministry Sustainability</span>
+                                    </div>
                                     <div class="pt-2">
-                                        <span class="inline-flex items-center justify-center w-full rounded-full bg-slate-200 px-6 py-3 text-base font-semibold text-slate-500 cursor-not-allowed">
-                                            2010 Photos (Coming Soon)
-                                        </span>
+                                        <a href="photos-2010.html" class="inline-flex items-center justify-center w-full rounded-full bg-cicGold px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-amber-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-cicGold focus:ring-offset-2">
+                                            View 2010 Photos
+                                        </a>
                                     </div>
                                 </div>
                             </article>
