@@ -1,0 +1,76 @@
+name: Bug Report
+description: Report a bug or unexpected behavior.
+labels: ['bug']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: |
+        - Describe here the bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: "How can we reproduce the issue? Please be as specific as possible."
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: |
+        - Describe here the expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements for the Fix
+      description: List the acceptance criteria for the bug to be considered fixed.
+      placeholder: |
+        - Describe here the requirements for the fix
+    validations:
+      required: true
+
+  - type: textarea
+    id: high-level-requirements
+    attributes:
+      label: High Level Impact
+      description: What is the business or user impact of this bug?
+      placeholder: |
+        - Describe here the high level impact of this bug
+    validations:
+      required: false
+
+  - type: textarea
+    id: dev-notes
+    attributes:
+      label: Dev Notes
+      description: Any logs, console errors, or technical context that might help in debugging.
+      placeholder: |
+        - Describe here any logs, console errors, or technical context that might help in debugging
+    validations:
+      required: false
+
+  - type: textarea
+    id: solution-design
+    attributes:
+      label: Proposed Solution Design
+      description: If you have an idea for a fix, outline the proposed technical solution.
+      placeholder: |
+        - Describe here the proposed technical solution to fix the bug
+    validations:
+      required: false

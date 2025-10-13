@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Cardiff International Church</title>
+    <title>Pastor | Cardiff International Church | a channel of God's love & blessing to all nations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="js/main.js"></script>
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
     <script>
         tailwind.config = {
             theme: {
@@ -46,53 +42,10 @@
         .nav-menu .sub-menu {
             z-index: 1000;
         }
-
-        /* Added by Pesitha 09/10/2025 */
-
-        /* Sticky navbar */
-        .main-navigation {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .main-navigation.is-sticky {
-            background-color: #0f172a; /* cicNavy color */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav-menu a {
-            transition: all 0.3s ease-in-out;
-        }
-
-        .nav-menu a:hover {
-            background-color: rgba(255, 215, 0, 0.15);
-            color: #facc15;
-        }
-
-        iframe {
-            transition: opacity 0.5s ease, filter 0.5s ease;
-        }
-
-        iframe:hover {
-            opacity: 1;
-            filter: none;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* End by Pesitha 09/10/2025 */
-
     </style>
 </head>
-
 <body class="bg-slate-100 text-slate-800 font-sans antialiased">
-    <!-- Added by Pesitha 09/10/2025 -->
-    <!-- rounded-b-lg to rounded-t-lg -->
-    <header class="site-header max-w-7xl mx-auto bg-white shadow-2xl rounded-t-lg overflow-hidden">
-    <!-- End by Pesitha 09/10/2025 -->
+    <header class="site-header max-w-7xl mx-auto bg-white shadow-2xl rounded-b-lg overflow-hidden">
         <div class="header-bar px-6 py-8 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div class="branding space-y-2 text-left">
                 <h1 class="site-title text-3xl md:text-4xl font-bold text-cicGold">
@@ -100,37 +53,25 @@
                 </h1>
                 <p class="site-tagline text-base md:text-lg italic text-slate-600">a channel of God's love & blessing to all nations</p>
             </div>
-            
-            <!-- Added by Pesitha 13/10/2025 -->
-            <!-- Search box Styling -->
-            <form class="search-container relative flex w-full max-w-sm items-center" role="search">
+            <form class="search-container flex w-full max-w-xs gap-3 items-center md:justify-end" role="search">
                 <label for="search" class="sr-only">Search</label>
-                <input type="search" id="search" placeholder="Search..." aria-label="Search" class="peer w-full rounded-full border border-slate-300 bg-white/90 px-5 py-3 text-sm shadow-sm placeholder-slate-400 transition-all focus:border-cicGold focus:bg-white focus:shadow-md focus:ring-2 focus:ring-cicGold/40"/>
-                <button type="submit" aria-label="Search" class="absolute right-2 grid h-9 w-9 place-items-center rounded-full bg-cicNavy text-white text-base shadow-sm transition-all hover:bg-cicGold hover:text-slate-900 hover:shadow-md peer-focus:scale-110">
-    
-                    <!-- SVG path W3school - Need to replace later if wanted. -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"/>
-                    </svg>
-                </button>
+                <input type="search" id="search" placeholder="Search..." aria-label="Search" class="w-full rounded-full border border-slate-300/70 bg-white px-4 py-2 text-sm focus:border-cicGold focus:outline-none focus:ring-2 focus:ring-cicGold/40">
+                <button type="submit" aria-label="Search" class="grid h-11 w-11 place-items-center rounded-full bg-cicNavy text-white text-lg shadow-md transition hover:bg-slate-800">🔍</button>
             </form>
-            <!-- End by Pesitha 13/10/2025 -->
-
         </div>
         <div class="header-image bg-black">
             <img src="https://cardiffinternationalchurch.org/wp-content/uploads/2019/07/cropped-20190714_162207.jpg" alt="Cardiff International Church outdoor gathering" class="h-[400px] md:h-[630px] w-full object-cover">
         </div>
     </header>
 
-    <nav class="main-navigation max-w-7xl mx-auto bg-slate-800/95 backdrop-blur-sm text-white shadow-lg rounded-b-lg mb-12" role="navigation">
-
+    <nav class="main-navigation max-w-7xl mx-auto bg-slate-700 text-white shadow-xl rounded-b-lg mb-12" role="navigation">
         <div class="px-4 md:px-6">
             <div class="flex items-center justify-between py-3 md:hidden">
                 <span class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">Menu</span>
                 <button class="menu-toggle inline-flex items-center justify-center rounded-md px-3 py-2 text-2xl hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-700 focus:ring-amber-400" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
             </div>
             <ul id="primary-navigation" class="nav-menu hidden flex-col divide-y divide-slate-600 text-xs font-semibold uppercase md:flex md:flex-row md:flex-nowrap md:items-center md:gap-0 md:divide-y-0 md:text-sm md:whitespace-nowrap">
-                <li><a href="index.html" class="block px-2 py-3 text-amber-300 hover:bg-slate-600 md:rounded-md md:px-3">Home</a></li>
+                <li><a href="index.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Home</a></li>
                 <li><a href="purpose-of-life.html" class="block px-2 py-3 hover:bg-slate-600 md:rounded-md md:px-3">Purpose of Life</a></li>
                 <li class="relative group">
                     <a href="whats-on.html" class="has-dropdown flex items-center justify-between gap-2 px-2 py-3 hover:bg-slate-600 md:px-3 md:py-3 md:rounded-md">
@@ -138,9 +79,10 @@
                         <span class="text-xs">▾</span>
                     </a>
                     <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
-                        <li><a href="sunday.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Sunday</a></li>
+                        <li><a href="sunday.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Sunday Service</a></li>
                         <li><a href="small-group-fellowship.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Small Group Fellowship</a></li>
                         <li><a href="revival-worship-night.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Revival Worship Night</a></li>
+                        <li><a href="international-cafe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">International Cafe</a></li>
                     </ul>
                 </li>
                 <li class="relative group">
@@ -149,7 +91,6 @@
                         <span class="text-xs">▾</span>
                     </a>
                     <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
-                        <li><a href="free-international-cafe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free International Cafe</a></li>
                         <li><a href="free-english-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free English Class</a></li>
                         <li><a href="free-korean-class.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Free Korean Class</a></li>
                     </ul>
@@ -175,7 +116,7 @@
                         <span class="text-xs">▾</span>
                     </a>
                     <ul class="sub-menu hidden flex-col gap-0 rounded-md bg-slate-600 shadow-xl md:absolute md:left-0 md:top-full md:min-w-[14rem] md:rounded-b-md md:border md:border-slate-500 md:p-2 md:shadow-2xl md:z-50 md:group-hover:flex md:group-focus-within:flex">
-                        <li><a href="pastor.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Pastor</a></li>
+                        <li><a href="pastor.html" class="block rounded-md px-3 py-2 text-amber-300 text-sm hover:bg-slate-500">Pastor</a></li>
                         <li><a href="leadership-team.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Leadership Team</a></li>
                         <li><a href="nationalities.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">Nationalities at CIC</a></li>
                         <li><a href="what-we-believe.html" class="block rounded-md px-3 py-2 text-sm hover:bg-slate-500">What We Believe</a></li>
@@ -186,87 +127,82 @@
         </div>
     </nav>
 
-    <!-- Added by Pesitha 09/10/2025 -->
     <main id="main-content" class="px-4 pb-16">
-        <div class="entry-content">
-            <section id="contact" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-white p-12 shadow-2xl md:p-16">
-                <div class="absolute inset-0 bg-gradient-to-r from-cicGold/10 to-transparent"></div>
-                <div class="relative mx-auto  space-y-16 text-center">
-                    <h2 class="font-heading text-4xl text-slate-900 md:text-5xl">Contact Us</h2>
-                    <p class="text-lg text-slate-600">We’d love to hear from you! Please fill out the form below and we’ll get back to you soon.</p>
-
-                    <!-- Location Info Section -->
-                    <div class="mt-8 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-3xl shadow-xl p-8 md:p-10">
-                        <h3 class="text-2xl font-heading text-cicNavy mb-6 text-center">Visit Us</h3>
-                        <ul class="space-y-4 text-base text-slate-700">
-                            <li>
-                                <span class="font-semibold text-cicNavy">📍 Address:</span><br>
-                                Cardiff International Church,<br>
-                                Cathays Terrace, Cathays,<br>
-                                Cardiff, CF24 4HS, UK
-                            </li>
-                            <li>
-                                <span class="font-semibold text-cicNavy">🚶 Location:</span><br>
-                                Between No. 49 &amp; 51 Cathays Terrace — a few minutes’ walk from Lidl, Cardiff University &amp; Cathays Railway Station.<br>
-                                <a href="#map-section" class="text-cicGold hover:underline hover:text-amber-500 transition-colors">
-                                    View on Google Maps
-                                </a>
-                            </li>
-                            <li>
-                                <span class="font-semibold text-cicNavy">📞 Phone:</span><br>
-                                02921 321 044<br>
-                                <span class="text-slate-500 text-sm">(from abroad: +44 2921 321 044)</span>
-                            </li>
-                            <li>
-                                <span class="font-semibold text-cicNavy">✉️ Email:</span><br>
-                                Please leave your message using the form below. We’ll reply as soon as possible.
-                            </li>
-                        </ul>
+        <div class="mx-auto flex max-w-7xl flex-col gap-12">
+            <section id="pastor-content" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-white p-12 shadow-2xl md:p-16">
+                <div class="absolute inset-0 bg-gradient-to-r from-cicGold/5 to-transparent"></div>
+                <div class="relative space-y-16">
+                    <!-- Page Header -->
+                    <div class="text-center space-y-6">
+                        <div class="inline-flex items-center rounded-full bg-cicGold/10 px-4 py-2">
+                            <span class="text-xs font-semibold uppercase tracking-[0.4em] text-cicGold md:text-sm">Our Pastor</span>
+                        </div>
+                        <h1 class="font-heading text-4xl text-slate-900 md:text-5xl lg:text-6xl">Pastor</h1>
+                        <p class="mx-auto max-w-3xl text-lg leading-8 text-slate-600 md:text-xl">Meet our pastoral leadership serving Cardiff International Church</p>
                     </div>
 
-                    <!-- Contact Form Section -->
-                    <form id="contact-us-form" name="contact-us-form" class="space-y-6 mt-10">
-                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-slate-700">Your Name <span class="text-rose-600">*</span></label>
-                                <input type="text" id="name" name="name" required class="mt-2 w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 text-slate-800 placeholder-slate-400 shadow-sm transition-all focus:border-cicGold focus:ring-2 focus:ring-cicGold/30 focus:bg-white">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-slate-700">Your Email <span class="text-rose-600">*</span></label>
-                                <input type="email" id="email" name="email" required class="mt-2 w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 text-slate-800 placeholder-slate-400 shadow-sm transition-all focus:border-cicGold focus:ring-2 focus:ring-cicGold/30 focus:bg-white">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="title" class="block text-sm font-medium text-slate-700">Subject</label>
-                            <input type="text" id="title" name="title" class="mt-2 w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 text-slate-800 placeholder-slate-400 shadow-sm transition-all focus:border-cicGold focus:ring-2 focus:ring-cicGold/30 focus:bg-white">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-slate-700">Your Message</label>
-                            <textarea id="message" name="message" rows="6" class="mt-2 w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-3 text-slate-800 placeholder-slate-400 shadow-sm transition-all focus:border-cicGold focus:ring-2 focus:ring-cicGold/30 focus:bg-white"></textarea>
-                        </div>
+                    <!-- Rev. Gi-Jung Song Section -->
+                    <div class="space-y-8">
                         <div class="text-center">
-                            <input id="button" type="submit" value="Send Email" class="rounded-full bg-cicNavy px-8 py-3 text-white font-semibold shadow-md transition-all hover:bg-cicGold hover:text-slate-900 hover:shadow-lg">
+                            <h2 class="font-heading text-3xl text-slate-900 md:text-4xl">Rev. Gi-Jung Song</h2>
                         </div>
-                    </form>
-                    
-                    <!-- Map -->
-                    <div id="map-section" class="mt-10 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-900/10">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.991975171737!2d-3.1837928!3d51.4924262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1cbd6787f16d%3A0x4fa4a180bdba274c!2sCardiff%20International%20Church!5e0!3m2!1sen!2suk!4v1700000000000"
-                            width="100%"
-                            height="400"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            class="w-full"
-                        ></iframe>
+
+                        <!-- Education & Ministry Journey -->
+                        <div class="space-y-6">
+                            <p class="text-lg text-slate-700 leading-relaxed">
+                                Ps GJ Song graduated with a Bachelor of Theology (BTh) from 
+                                <a href="http://hsiec.hansei.ac.kr/eng/index.html" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Hansei University</a> 
+                                and a Master of Theology (MTh) from 
+                                <a href="https://www.ust.ac.uk/about-us/what-is-union" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Wales Evangelical School of Theology</a> 
+                                (2001-2002, now Union School of Theology). He resigned from his military career as a captain in 1992 and was born again and baptised at 
+                                <a href="https://english.fgtv.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Yoido Full Gospel Church</a>. 
+                                His ministry journey includes serving at 
+                                <a href="https://gntc.net" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Grace & Truth Church, 
+                                <a href="https://highfieldschurch.org" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Highfields Church</a>, 
+                                <a href="https://www.bracklatabernacle.org" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Brackla Tabernacle</a>, 
+                                as well as missions across Europe in countries like the UK (Wales), Latvia, Ukraine, etc.
+                            </p>
+                            
+                            <p class="text-lg text-slate-700 leading-relaxed">
+                                He was one of seven delegates representing Wales at the 4th Lausanne Congress, which took place in South Korea in 2024. He organised the 
+                                <a href="https://www.youtube.com/watch?v=3KVJ2tUmkEo" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Wales & Korea Celebration 2016</a>, 
+                                commemorating the 150th anniversary of R. J. Thomas' mission. Ps GJ is the founder and pastor of 
+                                <a href="https://cardiffinternationalchurch.org" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Cardiff International Church (CIC)</a>, 
+                                serving since 2008, and is also the pastor of 
+                                <a href="http://newportinternationalchurch.org" target="_blank" rel="noopener noreferrer" class="font-medium text-cicNavy hover:text-cicGold transition-colors">Newport International Church (NIC)</a> 
+                                from 2021 to the present.
+                            </p>
+                        </div>
+
+                        <!-- Personal Life Section -->
+                        <div class="rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 p-8 shadow-lg">
+                            <h3 class="font-heading text-2xl text-slate-900 mb-4">Personal Life</h3>
+                            <p class="text-lg text-slate-700 leading-relaxed">
+                                Ps GJ Song is blessed to be married to Ji-Hee Lee, who also serves on the CIC Leadership Team. They enjoy sports, walking, and gardening together, and Ji-Hee has a keen interest in trying out new recipes. Their two grown children are both pursuing their passions—one teaches English in South Korea, and the other is working as a medical doctor in the UK, aiming to provide healthcare in the developing world.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center space-y-8">
+                        <div>
+                            <h2 class="font-heading text-4xl text-slate-900 md:text-5xl mb-4">Connect With Our Church</h2>
+                            <p class="mx-auto max-w-3xl text-lg leading-8 text-slate-600 md:text-xl">We'd love to meet you and welcome you into our church family. Join us for worship, fellowship, and spiritual growth.</p>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="sunday.html" class="inline-flex items-center justify-center rounded-full bg-cicGold px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-amber-600 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-cicGold focus:ring-offset-2">
+                                Visit Us This Sunday
+                            </a>
+                            <a href="contact.html" class="inline-flex items-center justify-center rounded-full border-2 border-cicGold bg-transparent px-8 py-4 text-base font-semibold text-cicGold transition hover:bg-cicGold hover:text-white focus:outline-none focus:ring-2 focus:ring-cicGold focus:ring-offset-2">
+                                Get In Touch
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
-    <!-- End by Pesitha 09/10/2025 -->
 
     <footer class="site-footer bg-slate-700 text-slate-200">
         <div class="mx-auto max-w-7xl px-4 py-12">
@@ -338,49 +274,6 @@
         </div>
     </footer>
 
-<script>
-    window.addEventListener('scroll', function() {
-        const nav = document.querySelector('.main-navigation');
-        if (window.scrollY > 400) {
-            nav.classList.add('is-sticky');
-        } else {
-            nav.classList.remove('is-sticky');
-        }
-    });
-    
-    //EmailJS Code
-    (function() {
-        emailjs.init("Ghh5LDiqURSdqq_iX");
-    })();
-
-    const contact_form = document.getElementById("contact-us-form");
-
-    contact_form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const btn = document.getElementById("button");
-        btn.value = "Sending...";
-
-        const timeInput = document.createElement("input");
-        timeInput.type = "hidden";
-        timeInput.name = "time";
-        timeInput.value = new Date().toLocaleString();
-        contact_form.appendChild(timeInput);
-
-        const serviceID = "default_service";
-        const templateID = "template_g0cbt1c";
-
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                btn.value = "Send Email";
-                alert("✅ Message sent successfully!");
-                form.reset();
-            }, (err) => {
-                btn.value = "Send Email";
-                alert("❌ Failed to send: " + JSON.stringify(err));
-            });
-    });
-</script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
