@@ -19,10 +19,7 @@ Welcome to the official repository for the Cardiff International Church (CIC) We
 
 ## About
 
-This repository contains the source code for the [Cardiff International Church](https://cardiffinternationalchurch.org.uk) website. The goal is to provide information about CIC, its vision, activities, and how to get involved.
-
-- **Main language:** HTML (96.5%)
-- **Supplementary language:** JavaScript (3.5%)
+This repository contains the source code for the [Cardiff International Church](https://cardiffinternationalchurch.org) website. The goal is to provide information about CIC, its vision, activities, and how to get involved.
 
 ## Features
 
@@ -72,7 +69,7 @@ We welcome contributions! Please follow these steps:
 
 1. Fork the repository
 2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes: `git commit -am 'Add new feature'`
+3. Commit your changes: `git add -A; git commit -m 'Add new feature'`
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Create a Pull Request
 
@@ -84,8 +81,12 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-- Website: [cardiffinternationalchurch.org.uk](https://cardiffinternationalchurch.org.uk)
-- Email: [info@cardiffinternationalchurch.org.uk](mailto:info@cardiffinternationalchurch.org.uk)
+- Website: [cardiffinternationalchurch.org](https://cardiffinternationalchurch.org)
+- Email: [cardiffinternationalchurch@gmail.com](mailto:cardiffinternationalchurch@gmail.com)
+
+## Emailjs
+
+More information to follow...
 
 ---
 

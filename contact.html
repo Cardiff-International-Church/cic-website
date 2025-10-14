@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -26,50 +27,6 @@
             }
         };
     </script>
-    <style>
-        /* Ensure dropdown menus work properly */
-        .nav-menu .group:hover .sub-menu,
-        .nav-menu .group:focus-within .sub-menu {
-            display: flex !important;
-        }
-        
-        /* Mobile dropdown styles */
-        @media (max-width: 768px) {
-            .nav-menu li.active .sub-menu {
-                display: flex !important;
-            }
-        }
-        
-        /* Ensure proper z-index layering */
-        .nav-menu .sub-menu {
-            z-index: 1000;
-        }
-
-        /* Sticky navbar */
-        .main-navigation {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .nav-menu a {
-            transition: all 0.3s ease-in-out;
-        }
-
-        iframe {
-            transition: opacity 0.5s ease, filter 0.5s ease;
-        }
-
-        iframe:hover {
-            opacity: 1;
-            filter: none;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body class="bg-slate-100 text-slate-800 font-sans antialiased">

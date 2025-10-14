@@ -1,0 +1,42 @@
+/* Ensure dropdown menus work properly */
+.nav-menu .group:hover .sub-menu,
+.nav-menu .group:focus-within .sub-menu {
+    display: flex !important;
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 768px) {
+    .nav-menu li.active .sub-menu {
+        display: flex !important;
+    }
+}
+
+/* Ensure proper z-index layering */
+.nav-menu .sub-menu {
+    z-index: 1000;
+}
+
+/* Sticky navbar */
+.main-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu a {
+    transition: all 0.3s ease-in-out;
+}
+
+iframe {
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+iframe:hover {
+    opacity: 1;
+    filter: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
