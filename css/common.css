@@ -46,3 +46,13 @@ body {
     overflow-x: hidden;
     max-width: 100vw;
 }
+
+/* Header image loading states */
+.header-image img {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.header-image img.loaded {
+    opacity: 1;
+}
