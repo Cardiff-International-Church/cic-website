@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Cardiff International Church</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cicGold: '#b8860b',
+                        cicNavy: '#0f172a'
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+                        heading: ['"Playfair Display"', 'Georgia', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-slate-100 font-sans antialiased">
+    <div class="min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="max-w-2xl w-full">
+            <!-- Card -->
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <!-- Header with Gold Accent -->
+                <div class="bg-gradient-to-r from-cicGold to-amber-600 px-8 py-6">
+                    <div class="text-center">
+                        <h1 class="text-6xl font-bold text-white mb-2">404</h1>
+                        <p class="text-white text-lg font-medium">Page Not Found</p>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="px-8 py-10 text-center">
+                    <div class="mb-8">
+                        <svg class="mx-auto h-24 w-24 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+
+                    <h2 class="text-2xl font-heading font-bold text-slate-800 mb-4">
+                        Oops! This Page Doesn't Exist
+                    </h2>
+                    
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        The page you're looking for might have been moved, deleted, or never existed. 
+                        Don't worry, you can find your way back home!
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="index.html" 
+                           class="inline-flex items-center px-8 py-3 bg-cicGold hover:bg-amber-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            Go to Homepage
+                        </a>
+                        
+                        <a href="contact.html" 
+                           class="inline-flex items-center px-8 py-3 bg-slate-700 hover:bg-slate-800 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Contact Us
+                        </a>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="mt-12 pt-8 border-t border-slate-200">
+                        <p class="text-sm text-slate-500 mb-4 font-medium">Quick Links:</p>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm">
+                            <a href="index.html" class="text-cicGold hover:text-amber-700 font-medium transition-colors">Home</a>
+                            <span class="text-slate-300">•</span>
+                            <a href="about.html" class="text-cicGold hover:text-amber-700 font-medium transition-colors">About Us</a>
+                            <span class="text-slate-300">•</span>
+                            <a href="contact.html" class="text-cicGold hover:text-amber-700 font-medium transition-colors">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="bg-slate-50 px-8 py-6 text-center border-t border-slate-200">
+                    <p class="text-slate-600 text-sm">
+                        <strong class="text-cicGold">Cardiff International Church</strong><br>
+                        <span class="italic text-slate-500">a channel of God's love & blessing to all nations</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
