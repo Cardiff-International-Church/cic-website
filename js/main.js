@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Event hover effects
     initEventAnimations();
+    
+    // Contact form functionality
+    initContactForm();
+    
+    // Form field enhancements
+    initFormFieldEnhancements();
 });
 
 /**
@@ -391,4 +397,497 @@ if ('serviceWorker' in navigator) {
         //     .then(registration => console.log('SW registered'))
         //     .catch(registrationError => console.log('SW registration failed'));
     });
+}
+
+// ============================================
+// CONTACT FORM FUNCTIONALITY
+// ============================================
+
+/**
+ * Initialize EmailJS
+ */
+function initEmailJS() {
+    // Initialize EmailJS with your public key
+    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('0CnrdV3Rd7u2sxjpa'); 
+    }
+}
+
+/**
+ * Contact Form Validation and Handling
+ */
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    // Initialize EmailJS
+    initEmailJS();
+
+    // Prevent form from submitting normally (prevents double submission)
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Form submit event prevented');
+    });
+
+    // Add real-time validation on blur for each field
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const phoneField = document.getElementById('phone');
+    const messageField = document.getElementById('message');
+
+    if (nameField) {
+        nameField.addEventListener('blur', function() {
+            console.log('Name field blur - value:', this.value);
+            validateField('name', this.value);
+        });
+        // Also validate on input for immediate feedback
+        nameField.addEventListener('input', function() {
+            if (this.value.length > 0) {
+                validateField('name', this.value);
+            }
+        });
+    }
+
+    if (emailField) {
+        emailField.addEventListener('blur', function() {
+            console.log('Email field blur - value:', this.value);
+            validateField('email', this.value);
+        });
+        // Also validate on input for immediate feedback
+        emailField.addEventListener('input', function() {
+            if (this.value.length > 0) {
+                validateField('email', this.value);
+            }
+        });
+    }
+
+    if (phoneField) {
+        phoneField.addEventListener('blur', function() {
+            console.log('Phone field blur - value:', this.value);
+            // Only validate if user entered something
+            if (this.value.trim().length > 0) {
+                validateField('phone', this.value);
+            }
+        });
+        // Also validate on input for immediate feedback
+        phoneField.addEventListener('input', function() {
+            if (this.value.trim().length > 0) {
+                validateField('phone', this.value);
+            }
+        });
+    }
+
+    if (messageField) {
+        messageField.addEventListener('blur', function() {
+            console.log('Message field blur - value:', this.value);
+            validateField('message', this.value);
+        });
+        // Also validate on input for immediate feedback after some typing
+        messageField.addEventListener('input', function() {
+            if (this.value.length > 0) {
+                validateField('message', this.value);
+            }
+        });
+    }
+
+    // Handle form submission by intercepting button click instead of form submit
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    let isSubmitting = false; // Flag to prevent double submission
+    
+    if (submitButton) {
+        submitButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default form submission
+            event.stopPropagation(); // Stop event from bubbling up
+
+            // Prevent double submission
+            if (isSubmitting) {
+                console.log('Form is already being submitted, ignoring duplicate request');
+                return;
+            }
+
+            // Get form data manually
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            console.log('Form data:', data);
+
+            // Validate form manually
+            if (validateForm(data)) {
+                // Set submitting flag
+                isSubmitting = true;
+                
+                // Show loading state
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                // Send email using EmailJS
+                sendEmail(data)
+                    .then(() => {
+                        // Show success message
+                        showMessage(
+                            "Thank you for your message! We'll get back to you within 24-48 hours.",
+                            'success',
+                        );
+
+                        // Reset form
+                        contactForm.reset();
+                    })
+                    .catch((error) => {
+                        console.error('Email sending failed:', error);
+                        showMessage(
+                            'Sorry, there was an error sending your message. Please try again or contact us directly at cardiffinternationalchurch@gmail.com',
+                            'error',
+                        );
+                    })
+                    .finally(() => {
+                        // Reset button and flag
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                        isSubmitting = false;
+                    });
+            }
+        });
+    }
+}
+
+/**
+ * Send email using EmailJS
+ */
+function sendEmail(formData) {
+    // Replace these with your actual EmailJS service ID and template ID
+    const serviceID = 'service_cic';
+    const templateID = 'template_cic_website';
+
+    // Prepare template parameters
+    const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'Not provided',
+        subject: formData.subject || 'General Enquiry',
+        message: formData.message,
+        to_name: 'Cardiff International Church',
+    };
+
+    // Send email via EmailJS
+    return emailjs.send(serviceID, templateID, templateParams);
+}
+
+/**
+ * Validate individual field (for real-time validation)
+ */
+function validateField(fieldName, value) {
+    console.log(`Validating field: ${fieldName}, value: "${value}"`);
+    
+    // Clear existing error for this field
+    const field = document.getElementById(fieldName);
+    if (!field) {
+        console.log(`Field ${fieldName} not found`);
+        return;
+    }
+
+    const existingError = field.parentNode.querySelector('.field-error');
+    if (existingError) {
+        existingError.remove();
+    }
+
+    // Reset field border and classes
+    field.style.borderColor = '';
+    field.style.borderWidth = '';
+    field.classList.remove('error', 'valid');
+
+    // Don't validate empty optional fields
+    if ((!value || value.trim() === '') && (fieldName === 'phone' || fieldName === 'subject')) {
+        console.log(`Skipping validation for empty optional field: ${fieldName}`);
+        return true;
+    }
+
+    // For required fields, if empty, don't show error during typing but do on blur
+    if (!value || value.trim() === '') {
+        console.log(`Empty required field: ${fieldName}`);
+        return false;
+    }
+
+    // Validate based on field type
+    let isValid = true;
+    let errorMessage = '';
+
+    switch (fieldName) {
+        case 'name':
+            if (value.trim().length < 2) {
+                isValid = false;
+                errorMessage = 'Please enter your name (at least 2 characters)';
+            } else if (!isValidName(value)) {
+                isValid = false;
+                errorMessage = 'Name can only contain letters, spaces, hyphens (-) and apostrophes (\')';
+            }
+            break;
+
+        case 'email':
+            if (!isValidEmail(value)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid email address';
+            }
+            break;
+
+        case 'phone':
+            if (!isValidPhone(value)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid UK phone number (e.g., 07123 456789 or +44 7123 456789)';
+            }
+            break;
+
+        case 'message':
+            if (value.trim().length < 10) {
+                isValid = false;
+                errorMessage = 'Please provide more details in your message (minimum 10 characters)';
+            }
+            break;
+    }
+
+    console.log(`Validation result for ${fieldName}: ${isValid}`);
+
+    // Show error or success state
+    if (!isValid) {
+        showFieldError(fieldName, errorMessage);
+        field.classList.add('error');
+    } else {
+        // Show green border for valid field
+        field.style.borderColor = '#10b981';
+        field.style.borderWidth = '2px';
+        field.classList.add('valid');
+    }
+
+    return isValid;
+}
+
+/**
+ * Form Validation (for submit)
+ */
+function validateForm(data) {
+    // Clear any existing field errors first
+    clearFieldErrors();
+
+    let isValid = true;
+
+    // Required fields validation - show individual errors under each field
+    if (!data.name || data.name.trim().length < 2) {
+        showFieldError('name', 'Please enter your name (at least 2 characters)');
+        isValid = false;
+    } else if (!isValidName(data.name)) {
+        showFieldError('name', 'Name can only contain letters, spaces, hyphens (-) and apostrophes (\')');
+        isValid = false;
+    }
+
+    if (!data.email || !isValidEmail(data.email)) {
+        showFieldError('email', 'Please enter a valid email address');
+        isValid = false;
+    }
+
+    // Phone is optional, but if provided, must be valid
+    if (data.phone && data.phone.trim().length > 0 && !isValidPhone(data.phone)) {
+        showFieldError('phone', 'Please enter a valid UK phone number (e.g., 07123 456789 or +44 7123 456789)');
+        isValid = false;
+    }
+
+    if (!data.message || data.message.trim().length < 10) {
+        showFieldError(
+            'message',
+            'Please provide more details in your message (minimum 10 characters)',
+        );
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+/**
+ * Email validation
+ */
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+/**
+ * Name validation - only letters, spaces, hyphens, and apostrophes
+ */
+function isValidName(name) {
+    // Allow letters (including accented characters), spaces, hyphens, and apostrophes
+    // This regex supports international characters (Unicode letters)
+    const nameRegex = /^[\p{L}\s'-]+$/u;
+    return nameRegex.test(name);
+}
+
+/**
+ * Phone validation - UK phone numbers
+ */
+function isValidPhone(phone) {
+    // Remove all spaces, hyphens, and parentheses for validation
+    const cleanPhone = phone.replace(/[\s\-()]/g, '');
+    
+    // UK phone number patterns:
+    // - Mobile: 07xxx xxxxxx (11 digits starting with 07)
+    // - Landline: 01xxx xxxxxx or 02x xxxx xxxx (10-11 digits starting with 01 or 02)
+    // - International: +447xxx xxxxxx (13 digits starting with +44)
+    // - Must be at least 10 digits, max 13 digits (with +44)
+    
+    // Pattern 1: International format +44 followed by 10 digits
+    const internationalPattern = /^\+44[1-9]\d{9}$/;
+    
+    // Pattern 2: UK format starting with 0, followed by 9-10 digits
+    const ukPattern = /^0[1-9]\d{8,9}$/;
+    
+    // Must match one of the patterns
+    return internationalPattern.test(cleanPhone) || ukPattern.test(cleanPhone);
+}
+
+/**
+ * Show individual field error
+ */
+function showFieldError(fieldName, errorMessage) {
+    const field = document.getElementById(fieldName);
+    if (!field) return;
+
+    // Remove any existing error for this field
+    const existingError = field.parentNode.querySelector('.field-error');
+    if (existingError) {
+        existingError.remove();
+    }
+
+    // Create error message element
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'field-error';
+    errorDiv.textContent = errorMessage;
+
+    // Add red border to the field
+    field.style.borderColor = '#dc2626';
+    field.style.borderWidth = '2px';
+
+    // Insert error message after the field
+    field.parentNode.appendChild(errorDiv);
+}
+
+/**
+ * Clear all field errors
+ */
+function clearFieldErrors() {
+    // Remove all existing error messages
+    const errorMessages = document.querySelectorAll('.field-error');
+    errorMessages.forEach((error) => error.remove());
+
+    // Reset field border styles and classes
+    const fields = ['name', 'email', 'phone', 'subject', 'message'];
+    fields.forEach((fieldName) => {
+        const field = document.getElementById(fieldName);
+        if (field) {
+            field.style.borderColor = '';
+            field.style.borderWidth = '';
+            field.classList.remove('error', 'valid');
+        }
+    });
+}
+
+/**
+ * Show message function
+ */
+function showMessage(message, type) {
+    console.log('showMessage called with:', message, type);
+
+    // Try to find the existing message container
+    let messageContainer = document.getElementById('formMessage');
+    console.log('Message container found:', messageContainer);
+
+    // If not found, create it dynamically and insert it into the form
+    if (!messageContainer) {
+        console.log('Creating message container dynamically...');
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            messageContainer = document.createElement('div');
+            messageContainer.id = 'formMessage';
+            messageContainer.className = 'form-message';
+            messageContainer.style.display = 'none';
+
+            // Insert before the submit button
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            contactForm.insertBefore(messageContainer, submitButton.parentNode);
+            console.log('Message container created and inserted');
+        } else {
+            console.log(
+                'ERROR: Could not find contactForm to insert message container!',
+            );
+            return;
+        }
+    }
+
+    // Update message content and styling
+    messageContainer.innerHTML = message;
+    messageContainer.className = `form-message ${type} show`;
+
+    // Show the message
+    messageContainer.style.display = 'block';
+
+    console.log('Message displayed with class:', messageContainer.className);
+    console.log('Message content:', messageContainer.innerHTML);
+
+    // Scroll to message
+    messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Auto-remove success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            messageContainer.style.display = 'none';
+            messageContainer.className = 'form-message';
+        }, 5000);
+    }
+}
+
+/**
+ * Form field enhancements
+ */
+function initFormFieldEnhancements() {
+    // Add focus effects to form fields
+    const formFields = document.querySelectorAll('input, select, textarea');
+    formFields.forEach((field) => {
+        field.addEventListener('focus', function () {
+            this.parentNode.classList.add('focused');
+        });
+
+        field.addEventListener('blur', function () {
+            this.parentNode.classList.remove('focused');
+            if (this.value.trim() !== '') {
+                this.parentNode.classList.add('filled');
+            } else {
+                this.parentNode.classList.remove('filled');
+            }
+        });
+    });
+
+    // Phone number formatting
+    const phoneField = document.querySelector('input[name="phone"]');
+    if (phoneField) {
+        phoneField.addEventListener('input', function () {
+            // Remove all non-digit characters
+            let value = this.value.replace(/\D/g, '');
+
+            // Format UK phone numbers
+            if (value.length > 0) {
+                if (value.startsWith('44')) {
+                    // International format
+                    value = '+' + value;
+                } else if (value.startsWith('0')) {
+                    // UK format
+                    if (value.length > 5) {
+                        value = value.substring(0, 5) + ' ' + value.substring(5);
+                    }
+                    if (value.length > 11) {
+                        value = value.substring(0, 11) + ' ' + value.substring(11);
+                    }
+                }
+            }
+
+            this.value = value;
+        });
+    }
 }
