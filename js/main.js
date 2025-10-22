@@ -111,12 +111,26 @@ function initMobileMenu() {
             const submenu = item.querySelector('.sub-menu');
             
             if (submenu) {
+                // Add dropdown arrow click handler for mobile
+                const arrow = link.querySelector('.text-xs');
+                if (arrow) {
+                    arrow.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            item.classList.toggle('active');
+                        }
+                    });
+                }
+                
+                // Allow the main link to work, but toggle on arrow click
                 link.addEventListener('click', function(e) {
-                    // Only prevent default on mobile
-                    if (window.innerWidth <= 768) {
+                    // Only intercept if clicking the arrow area on mobile
+                    if (window.innerWidth <= 768 && e.target.closest('.text-xs')) {
                         e.preventDefault();
                         item.classList.toggle('active');
                     }
+                    // Otherwise, let the link navigate normally
                 });
             }
         });
