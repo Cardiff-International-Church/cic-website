@@ -1,12 +1,20 @@
-/* Ensure dropdown menus work properly */
-.nav-menu .group:hover .sub-menu,
-.nav-menu .group:focus-within .sub-menu {
-    display: flex !important;
+/* Dropdown menu styles - Desktop hover */
+@media (min-width: 769px) {
+    .nav-menu .group:hover .sub-menu,
+    .nav-menu .group:focus-within .sub-menu {
+        display: flex !important;
+    }
 }
 
-/* Mobile dropdown styles */
+/* Mobile dropdown styles - Toggle via button */
 @media (max-width: 768px) {
-    .nav-menu li.active .sub-menu {
+    /* Hide by default */
+    .nav-menu .sub-menu.hidden {
+        display: none !important;
+    }
+    
+    /* Show when not hidden */
+    .nav-menu .sub-menu:not(.hidden) {
         display: flex !important;
     }
 }
@@ -14,6 +22,13 @@
 /* Ensure proper z-index layering */
 .nav-menu .sub-menu {
     z-index: 1000;
+}
+
+/* Smooth arrow rotation for dropdown toggles */
+.dropdown-toggle span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: center;
 }
 
 /* Sticky navbar */

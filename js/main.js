@@ -104,35 +104,47 @@ function initMobileMenu() {
             );
         });
         
-        // Handle submenu toggles on mobile
-        const menuItems = document.querySelectorAll('.nav-menu > li');
-        menuItems.forEach(item => {
-            const link = item.querySelector('a');
-            const submenu = item.querySelector('.sub-menu');
-            
-            if (submenu) {
-                // Add dropdown arrow click handler for mobile
-                const arrow = link.querySelector('.text-xs');
-                if (arrow) {
-                    arrow.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            item.classList.toggle('active');
+        // Handle submenu toggles on mobile with separate toggle buttons
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Find the parent li element
+                const parentLi = this.closest('li');
+                const submenu = parentLi.querySelector('.sub-menu');
+                const arrow = this.querySelector('span');
+                
+                if (submenu) {
+                    const isCurrentlyOpen = !submenu.classList.contains('hidden');
+                    
+                    // Close other open submenus
+                    const allSubmenus = document.querySelectorAll('.nav-menu .sub-menu');
+                    const allArrows = document.querySelectorAll('.dropdown-toggle span');
+                    allSubmenus.forEach((sm, idx) => {
+                        if (sm !== submenu) {
+                            sm.classList.add('hidden');
+                            sm.closest('li').classList.remove('active');
+                            allArrows[idx].style.transform = 'rotate(0deg)';
                         }
                     });
-                }
-                
-                // Allow the main link to work, but toggle on arrow click
-                link.addEventListener('click', function(e) {
-                    // Only intercept if clicking the arrow area on mobile
-                    if (window.innerWidth <= 768 && e.target.closest('.text-xs')) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
+                    
+                    // Toggle this submenu
+                    if (isCurrentlyOpen) {
+                        // Close it
+                        submenu.classList.add('hidden');
+                        parentLi.classList.remove('active');
+                        arrow.style.transform = 'rotate(0deg)';
+                    } else {
+                        // Open it
+                        submenu.classList.remove('hidden');
+                        parentLi.classList.add('active');
+                        arrow.style.transform = 'rotate(180deg)';
                     }
-                    // Otherwise, let the link navigate normally
-                });
-            }
+                }
+            });
         });
         
         // Close mobile menu when clicking outside
