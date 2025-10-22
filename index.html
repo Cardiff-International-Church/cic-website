@@ -31,7 +31,7 @@
     <header class="site-header max-w-7xl mx-auto bg-white shadow-2xl rounded-b-lg overflow-hidden">
         <div class="header-bar px-6 py-8 flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div class="branding space-y-2 text-left">
-                <h1 class="site-title text-3xl md:text-4xl font-bold text-cicGold">
+                <h1 class="site-title text-2xl md:text-3xl lg:text-4xl font-bold text-cicGold">
                     <a href="index.html" class="hover:text-amber-500 transition-colors">Cardiff International Church</a>
                 </h1>
                 <p class="site-tagline text-base md:text-lg italic text-slate-600">a channel of God's love & blessing to all nations</p>
@@ -42,8 +42,8 @@
                 <button type="submit" aria-label="Search" class="grid h-11 w-11 place-items-center rounded-full bg-cicNavy text-white text-lg shadow-md transition hover:bg-slate-800">🔍</button>
             </form> -->
         </div>
-        <div class="header-image bg-black">
-            <img src="" class="h-[400px] md:h-[630px] w-full object-cover">
+        <div class="header-image relative bg-black aspect-[16/9] sm:aspect-[21/9] md:aspect-[5/2] overflow-hidden">
+            <img src="" class="absolute inset-0 w-full h-full object-cover">
         </div>
     </header>
 
@@ -112,40 +112,43 @@
                           A warm welcome from all of us at Cardiff International Church (CIC)!
                         </p>
 
-                        <figure class="group mx-auto max-w-3xl overflow-hidden rounded-3xl shadow-2xl ring-1 ring-slate-900/10">
-                            <img src="images/home/edited-cake-1-1-1536x747.jpg" alt="Cardiff International Church community celebrating together" class="h-80 md:h-full w-full object-cover transition duration-700 group-hover:scale-105">
+                        <figure class="group relative mx-auto md:max-w-3xl overflow-hidden rounded-3xl shadow-2xl ring-1 ring-slate-900/10 aspect-[16/9]">
+                            <img src="images/home/edited-cake-1-1-1536x747.jpg" 
+                            alt="Cardiff International Church community celebrating together" 
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
                         </figure>
 
                         <div class="mx-auto md:max-w-4xl space-y-6 text-slate-800">
                             <p>Whether you're studying, working, or living in Cardiff, the capital of Wales, we are here to be your home and family.</p>
                             <p>We meet on Sundays and weekdays for a variety of activities, and you are most welcome to join us! We are conveniently located near Cardiff University.</p>
-                            <p class="text-xl font-semibold text-cicNavy">Looking forward to seeing you soon!</p>
+                            <p class="text-md md:text-xl font-semibold text-cicNavy">Looking forward to seeing you soon!</p>
                         </div>
                     </div>
 
                     <!-- Welcome photos section -->
                     <div class="space-y-8">
-                        <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
-                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                                <img src="images/home/Lucian-and-Mulongwe.jpg" class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="mx-auto grid max-w-6xl gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+                            <!-- First 3 images - full row on desktop -->
+                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl aspect-[21/9] sm:aspect-[16/9]">
+                                <img src="images/home/Lucian-and-Mulongwe.jpg" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Church service">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                             </figure>
-                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                                <img src="images/home/cropped-B2.jpg" class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl aspect-[21/9] sm:aspect-[16/9]">
+                                <img src="images/home/cropped-B2.jpg" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Church members">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                             </figure>
-                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                                <img src="images/home/cropped-B1.jpg" class="h-48 md:h-64 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl aspect-[21/9] sm:aspect-[16/9]">
+                                <img src="images/home/cropped-B1.jpg" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Outreach event">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                             </figure>
-                        </div>
-                        <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                                <img src="images/home/CIC17주년사진-Copy-494x300.jpg" class="h-44 md:h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            
+                            <!-- Last 2 images -->
+                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl aspect-[21/9] sm:aspect-[16/9]"> 
+                                <img src="images/home/CIC17주년사진-Copy-494x300.jpg" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Anniversary celebration">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                             </figure>
-                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                                <img src="images/home/cropped-Small-group-1-revised-scaled-1-489x300.jpg" class="h-44 md:h-56 w-full object-cover transition duration-500 group-hover:scale-110">
+                            <figure class="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-900/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl aspect-[21/9] sm:aspect-[16/9]">
+                                <img src="images/home/cropped-Small-group-1-revised-scaled-1-489x300.jpg" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Small group fellowship">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                             </figure>
                         </div>
@@ -159,21 +162,9 @@
                         </div>
 
                         <div class="space-y-4">
-                            <article class="event cursor-default rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
-                                <img src="images/home/Revival-Worship-Night-Poster-768x768.png" 
-                                     class="h-auto md:w-[600px] w-[300px] object-cover mb-4">
-                                <h4 class="font-heading text-xl text-slate-900 md:text-2xl">Revival Worship Night for the New Academic Year</h4>
-                                <p class="event-date mt-2 flex items-center text-base text-rose-600">
-                                    <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                                    </svg>
-                                    Fri 17 Oct, 7-8:30pm
-                                </p>
-                            </article>
-
-                            <article class="event cursor-default rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
-                                <h4 class="font-heading text-xl text-slate-900 md:text-2xl">Prayer Breakfast</h4>
-                                <p class="event-date mt-2 flex items-center text-base text-rose-600">
+                            <article class="event cursor-default rounded-xl border border-slate-200 bg-white px-6 py-3 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
+                                <h4 class="font-heading text-lg text-slate-900 md:text-xl">Prayer Breakfast</h4>
+                                <p class="event-date mt-2 flex items-center text-sm text-base text-rose-600">
                                     <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                                     </svg>
@@ -181,9 +172,15 @@
                                 </p>
                             </article>
 
-                            <article class="event cursor-default rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
-                                <h4 class="font-heading text-xl text-slate-900 md:text-2xl">Wales-Korea Revival Worship Night</h4>
-                                <p class="event-date mt-2 flex items-center text-base text-rose-600">
+                            <article class="event cursor-default rounded-xl border border-slate-200 bg-white px-6 py-3 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
+                                <figure class="relative w-full lg:max-w-lg md:max-w-md sm:max-w-sm mb-4 aspect-square overflow-hidden rounded-lg">
+                                    <img src="images/home/Revival-Worship-Night-Poster-768x768.png" 
+                                         class="absolute inset-0 w-full h-full object-cover"
+                                         alt="Wales-Korea Revival Worship Night"
+                                    >
+                                </figure>
+                                <h4 class="font-heading text-lg text-slate-900 md:text-xl">Wales-Korea Revival Worship Night</h4>
+                                <p class="event-date mt-2 flex items-center text-sm text-base text-rose-600">
                                     <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                                     </svg>
@@ -191,9 +188,9 @@
                                 </p>
                             </article>
 
-                            <article class="event cursor-default rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
-                                <h4 class="font-heading text-xl text-slate-900 md:text-2xl">Christmas Celebration</h4>
-                                <p class="event-date mt-2 flex items-center text-base text-rose-600">
+                            <article class="event cursor-default rounded-xl border border-slate-200 bg-white px-6 py-3 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
+                                <h4 class="font-heading text-lg text-slate-900 md:text-xl">Christmas Celebration</h4>
+                                <p class="event-date mt-2 flex items-center text-sm text-base text-rose-600">
                                     <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                                     </svg>
@@ -201,9 +198,9 @@
                                 </p>
                             </article>
 
-                            <article class="event cursor-default rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
-                                <h4 class="font-heading text-xl text-slate-900 md:text-2xl">Watch Night Service</h4>
-                                <p class="event-date mt-2 flex items-center text-base text-rose-600">
+                            <article class="event cursor-default rounded-xl border border-slate-200 bg-white px-6 py-3 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
+                                <h4 class="font-heading text-lg text-slate-900 md:text-xl">Watch Night Service</h4>
+                                <p class="event-date mt-2 flex items-center text-sm text-base text-rose-600">
                                     <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                                     </svg>
@@ -211,9 +208,9 @@
                                 </p>
                             </article>
 
-                            <article class="event cursor-default rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
-                                <h4 class="font-heading text-xl text-amber-900 md:text-2xl">Church Trip to Seoul, Korea</h4>
-                                <p class="event-date mt-2 flex items-center text-base text-rose-600">
+                            <article class="event cursor-default rounded-xl border border-slate-200 bg-white px-6 py-3 shadow-lg transition hover:-translate-y-1 hover:border-cicGold hover:shadow-2xl">
+                                <h4 class="font-heading text-lg text-amber-900 md:text-xl">Church Trip to Seoul, Korea</h4>
+                                <p class="event-date mt-2 flex items-center text-sm text-base text-rose-600">
                                     <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                                     </svg>
