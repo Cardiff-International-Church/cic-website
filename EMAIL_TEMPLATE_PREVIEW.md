@@ -87,7 +87,6 @@ The following variables are automatically replaced by EmailJS:
 │                                                         │
 │         Cardiff International Church                    │
 │    Cathays Terrace, Cathays, Cardiff, CF24 4HS, UK    │
-│       cardiffinternationalchurch@gmail.com             │
 │                                                         │
 │   This message was sent via the CIC website contact    │
 │                       form                              │

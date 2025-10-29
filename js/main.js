@@ -563,7 +563,7 @@ function initContactForm() {
                     .catch((error) => {
                         console.error('Email sending failed:', error);
                         showMessage(
-                            'Sorry, there was an error sending your message. Please try again or contact us directly at cardiffinternationalchurch@gmail.com',
+                            'Sorry, there was an error sending your message. Please try again later.',
                             'error',
                         );
                     })

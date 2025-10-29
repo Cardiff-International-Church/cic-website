@@ -82,7 +82,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 - Website: [cardiffinternationalchurch.org](https://cardiffinternationalchurch.org)
-- Email: [cardiffinternationalchurch@gmail.com](mailto:cardiffinternationalchurch@gmail.com)
 
 ## EmailJS Configuration
 
